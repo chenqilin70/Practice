@@ -16,6 +16,16 @@ import java.util.Map;
 @SessionAttributes(value = {"name"},types = {Integer.class})
 @Controller
 public class Hander11 {
+    @RequestMapping("testRedirect")
+    public String testRedirect(){
+        return "redirect:index.jsp";
+    }
+
+    @RequestMapping("testView")
+    public String testView(){
+        System.out.print("testView");
+        return "helloView";
+    }
     @ModelAttribute
     public void getUser(@RequestParam(value="username",required = false) String username,Map map){
         System.out.println("ModelAttribute is running");
