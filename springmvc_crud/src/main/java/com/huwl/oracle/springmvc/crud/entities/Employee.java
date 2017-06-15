@@ -1,14 +1,45 @@
 package com.huwl.oracle.springmvc.crud.entities;
 
+import org.hibernate.validator.constraints.Email;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.NumberFormat;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import java.util.Date;
+
 /**
  * Created by aierxuan on 2017/6/12.
  */
 public class Employee {
     private Integer id;
+    @NotNull
     private String lastName;
+    @Email
     private String email;
     private boolean gender;
     private Department department;
+    @Past
+    @DateTimeFormat(pattern = "yyyy")
+    private Date birthday;
+    @NumberFormat(pattern = "#,###,###.#")
+    private double salary;
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 
     public Department getDepartment() {
         return department;
@@ -68,7 +99,8 @@ public class Employee {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", gender=" + gender +
-                ", department=" + department +
+                ", birthday=" + birthday +
+                ", salary=" + salary +
                 '}';
     }
 }

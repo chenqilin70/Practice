@@ -5,8 +5,12 @@ import com.huwl.oracle.springmvc.crud.dao.EmployeeDao;
 import com.huwl.oracle.springmvc.crud.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.Collection;
 import java.util.Map;
 
@@ -51,8 +55,18 @@ public class EmployeeHandler {
     }
 
     @RequestMapping(value="emp" , method = RequestMethod.POST)
-    public String save(Employee employee){
+    public String save(@Valid Employee employee, BindingResult result
+            ,Map<String,Object> map){
         System.out.println(employee);
+        if(result.getErrorCount()>0){
+//            System.out.println("出错了");
+//            for(FieldError error:result.getFieldErrors()){
+//                System.out.println(error.getField()+"\t--\t"+error.getDefaultMessage());
+//            }
+            map.put("employee",new Employee());
+            map.put("depts",departmentDao.getDepartments());
+            return "content/input";
+        }
         employeeDao.save(employee);
         return "redirect:emps";
     }
@@ -70,4 +84,10 @@ public class EmployeeHandler {
         map.put("emps",coll);
         return "content/list";
     }
+
+//    @InitBinder
+//    public void testInitBinder(WebDataBinder dataBinder){
+//        dataBinder.setDisallowedFields("lastName");
+//
+//    }
 }
