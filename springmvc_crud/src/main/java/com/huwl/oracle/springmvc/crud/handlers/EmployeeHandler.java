@@ -59,13 +59,12 @@ public class EmployeeHandler {
             ,Map<String,Object> map){
         System.out.println(employee);
         if(result.getErrorCount()>0){
-//            System.out.println("出错了");
-//            for(FieldError error:result.getFieldErrors()){
-//                System.out.println(error.getField()+"\t--\t"+error.getDefaultMessage());
-//            }
-            map.put("employee",new Employee());
+            System.out.println("出错了");
+            for(FieldError error:result.getFieldErrors()){
+                System.out.println(error.getField()+"\t--\t"+error.getDefaultMessage());
+            }
             map.put("depts",departmentDao.getDepartments());
-            return "content/input";
+            return "/content/input";
         }
         employeeDao.save(employee);
         return "redirect:emps";

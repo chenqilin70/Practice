@@ -1,6 +1,7 @@
 package com.huwl.oracle.springmvc.crud.entities;
 
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 
@@ -13,7 +14,7 @@ import java.util.Date;
  */
 public class Employee {
     private Integer id;
-    @NotNull
+    @NotEmpty
     private String lastName;
     @Email
     private String email;
