@@ -9,11 +9,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
@@ -33,6 +31,40 @@ public class SpringMVCTest {
     private EmployeeDao employeeDao;
     @Autowired
     private ResourceBundleMessageSource messageSource;
+
+    @ResponseStatus(value = HttpStatus.FORBIDDEN,reason = "^^username is not right")
+    @RequestMapping("/testResponseStatusExceptionHandler")
+    public String testResponseStatusExceptionHandler(@RequestParam("i") Integer i){
+        if(i==13){
+            throw new MyException();
+        }
+        System.out.println("testResponseStatusExceptionHandler is running");
+        return "success" ;
+    }
+
+//    @ExceptionHandlerDemo({RuntimeException.class})
+//    public ModelAndView handleException(Exception ex){
+//        System.out.println("{exception}:"+ex.getMessage());
+//        ModelAndView mv=new ModelAndView("error");
+//        mv.addObject("exception",ex);
+//        return mv;
+//    }
+//
+//
+//
+//    @ExceptionHandlerDemo({ArithmeticException.class})
+//    public ModelAndView handleArithmeticException(Exception ex){
+//        System.out.println("exception:"+ex.getMessage());
+//        ModelAndView mv=new ModelAndView("error");
+//        mv.addObject("exception",ex);
+//        return mv;
+//    }
+
+    @RequestMapping("/testExceptionHandlerExceptionResolver")
+    public String testExceptionHandlerExceptionResolver(@RequestParam("i") Integer i){
+        System.out.println("result"+(10/i));
+        return "success";
+    }
 
     @RequestMapping("/testFileUpload")
     public String testFileUpload(@RequestParam("desc")String desc

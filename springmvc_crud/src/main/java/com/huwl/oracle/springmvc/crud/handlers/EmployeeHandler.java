@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.Collection;
@@ -24,6 +24,14 @@ public class EmployeeHandler {
     private EmployeeDao employeeDao;
     @Autowired
     private DepartmentDao departmentDao;
+
+//    @ExceptionHandlerDemo({RuntimeException.class})
+//    public ModelAndView handleException(Exception ex){
+//        System.out.println("{exception}:"+ex.getMessage());
+//        ModelAndView mv=new ModelAndView("error");
+//        mv.addObject("exception",ex);
+//        return mv;
+//    }
 
     @ModelAttribute("employee")
     public void getEmployee(@RequestParam(value = "id",required = false) Integer id
