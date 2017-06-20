@@ -13,8 +13,8 @@
         <!--<typeAlias type="com.huwl.oracle.practice.test_mybatis.beans.Employee" alias="emp"/>-->
     </typeAliases>
     
-    <environments default="development">
-        <environment id="development">
+    <environments default="dev_oracle">
+        <environment id="dev_mysql">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="${driverClass}"/>
@@ -23,9 +23,26 @@
                 <property name="password" value="${password}"/>
             </dataSource>
         </environment>
+        <environment id="dev_oracle">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${oracle.driverClass}"/>
+                <property name="url" value="${oracle.jdbcUrl}"/>
+                <property name="username" value="${oracle.username}"/>
+                <property name="password" value="${oracle.password}"/>
+            </dataSource>
+        </environment>
     </environments>
 
+    <databaseIdProvider type="DB_VENDOR">
+        <property name="MySQL" value="mysql"></property>
+        <property name="Oracle" value="oracle"></property>
+        <property name="SQL Server" value="sqlserver"></property>
+    </databaseIdProvider>
+
     <mappers>
-        <mapper resource="EmployeeMapper.xml"/>
+        <package name="com.huwl.oracle.practice.test_mybatis.dao" ></package>
+        <!--<mapper resource="EmployeeMapper.xml"/>-->
+        <!--<mapper class="com.huwl.oracle.practice.test_mybatis.dao.EmployeeMapperAnnotation"/>-->
     </mappers>
 </configuration>
