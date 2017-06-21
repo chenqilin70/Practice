@@ -7,13 +7,15 @@
     
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="true"/>
     </settings>
     <typeAliases>
         <package name="com.huwl.oracle.practice.test_mybatis.beans"/>
         <!--<typeAlias type="com.huwl.oracle.practice.test_mybatis.beans.Employee" alias="emp"/>-->
     </typeAliases>
     
-    <environments default="dev_oracle">
+    <environments default="dev_mysql">
         <environment id="dev_mysql">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">

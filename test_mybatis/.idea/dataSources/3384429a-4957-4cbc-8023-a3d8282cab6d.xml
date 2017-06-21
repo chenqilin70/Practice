@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="OracleStore">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="STORE">
+      <ObjectId>92</ObjectId>
+      <IntrospectionTimestamp>2017-06-21.16:00:24</IntrospectionTimestamp>
+      <CreatedTimestamp>2017-06-20.14:30:28</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-20.17:13:36</ModifiedTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="DIP">
+      <ObjectId>13</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="TSMSYS">
+      <ObjectId>14</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="ORACLE_OCM">
+      <ObjectId>20</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="DBSNMP">
+      <ObjectId>27</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="WMSYS">
+      <ObjectId>28</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="EXFSYS">
+      <ObjectId>38</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="CTXSYS">
+      <ObjectId>39</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="XDB">
+      <ObjectId>41</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="ANONYMOUS">
+      <ObjectId>42</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="ORDSYS">
+      <ObjectId>49</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="ORDPLUGINS">
+      <ObjectId>50</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="SI_INFORMTN_SCHEMA">
+      <ObjectId>51</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="MDSYS">
+      <ObjectId>52</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="OLAPSYS">
+      <ObjectId>56</ObjectId>
+    </schema>
+    <schema id="21" parent="1" name="MDDATA">
+      <ObjectId>60</ObjectId>
+    </schema>
+    <schema id="22" parent="1" name="SPATIAL_WFS_ADMIN_USR">
+      <ObjectId>62</ObjectId>
+    </schema>
+    <schema id="23" parent="1" name="SPATIAL_CSW_ADMIN_USR">
+      <ObjectId>65</ObjectId>
+    </schema>
+    <schema id="24" parent="1" name="WKSYS">
+      <ObjectId>67</ObjectId>
+    </schema>
+    <schema id="25" parent="1" name="WKPROXY">
+      <ObjectId>68</ObjectId>
+    </schema>
+    <schema id="26" parent="1" name="WK_TEST">
+      <ObjectId>70</ObjectId>
+    </schema>
+    <schema id="27" parent="1" name="SYSMAN">
+      <ObjectId>71</ObjectId>
+    </schema>
+    <schema id="28" parent="1" name="MGMT_VIEW">
+      <ObjectId>73</ObjectId>
+    </schema>
+    <schema id="29" parent="1" name="FLOWS_FILES">
+      <ObjectId>74</ObjectId>
+    </schema>
+    <schema id="30" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>75</ObjectId>
+    </schema>
+    <schema id="31" parent="1" name="FLOWS_030000">
+      <ObjectId>76</ObjectId>
+    </schema>
+    <schema id="32" parent="1" name="OWBSYS">
+      <ObjectId>77</ObjectId>
+    </schema>
+    <schema id="33" parent="1" name="SCOTT">
+      <ObjectId>81</ObjectId>
+    </schema>
+    <schema id="34" parent="1" name="HR">
+      <ObjectId>82</ObjectId>
+    </schema>
+    <schema id="35" parent="1" name="OE">
+      <ObjectId>83</ObjectId>
+    </schema>
+    <schema id="36" parent="1" name="IX">
+      <ObjectId>84</ObjectId>
+    </schema>
+    <schema id="37" parent="1" name="SH">
+      <ObjectId>85</ObjectId>
+    </schema>
+    <schema id="38" parent="1" name="PM">
+      <ObjectId>86</ObjectId>
+    </schema>
+    <schema id="39" parent="1" name="BI">
+      <ObjectId>87</ObjectId>
+    </schema>
+    <schema id="40" parent="1" name="QQMUSIC">
+      <ObjectId>96</ObjectId>
+    </schema>
+    <schema id="41" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <sequence id="42" parent="2" name="EMPLOYEE_SEQ">
+      <ObjectId>80774</ObjectId>
+      <CreatedTimestamp>2017-06-20.17:13:36</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-20.17:13:36</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>10</CacheSize>
+    </sequence>
+    <table id="43" parent="2" name="EMPLOYEE">
+      <ObjectId>80772</ObjectId>
+      <CreatedTimestamp>2017-06-20.14:30:28</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-20.14:30:28</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <column id="44" parent="43" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="43" name="LAST_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+    </column>
+    <column id="46" parent="43" name="GENDER">
+      <Position>3</Position>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="47" parent="43" name="EMAIL">
+      <Position>4</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+    </column>
+    <index id="48" parent="43" name="SYS_C0021874">
+      <ObjectId>80773</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-06-20.14:30:28</CreatedTimestamp>
+      <ModifiedTimestamp>2017-06-20.14:30:28</ModifiedTimestamp>
+      <TablespaceName>STORE</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="49" parent="43" name="SYS_C0021874">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2017-06-20.14:30:28</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C0021874</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

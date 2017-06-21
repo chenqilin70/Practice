@@ -1,6 +1,8 @@
 package com.huwl.oracle.practice.test_mybatis;
 
+import com.huwl.oracle.practice.test_mybatis.beans.Department;
 import com.huwl.oracle.practice.test_mybatis.beans.Employee;
+import com.huwl.oracle.practice.test_mybatis.dao.DepartmentMapper;
 import com.huwl.oracle.practice.test_mybatis.dao.EmployeeMapper;
 import com.huwl.oracle.practice.test_mybatis.dao.EmployeeMapperAnnotation;
 import org.apache.ibatis.io.Resources;
@@ -76,7 +78,7 @@ public class TestCenter {
         try{
             session=factory.openSession();
             EmployeeMapper mapper=session.getMapper(EmployeeMapper.class);
-            Employee employee=new Employee("kylin2","kylin2@qq.com","0");
+            Employee employee=new Employee("Jerry",null,"0");
             mapper.addEmp(employee);
             System.out.println("生成的主键为："+employee.getId());
             session.commit();
@@ -142,6 +144,49 @@ public class TestCenter {
             Employee employee=mapper.getEmpByMap(map);
             System.out.println(employee);
             session.commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+
+    @Test
+    public void testDifEmp(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapper mapper=session.getMapper(EmployeeMapper.class);
+            Employee employee=mapper.getEmpAndDept(1);
+            System.out.println(employee);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testDeptById(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            DepartmentMapper mapper=session.getMapper(DepartmentMapper.class);
+            Department department=mapper.getDeptById(1);
+            System.out.println(department);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testGetEmpByStep(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapper mapper=session.getMapper(EmployeeMapper.class);
+            Employee employee=mapper.getEmpByStep(1);
+            System.out.println(employee.getDept().getId());
         }catch (Exception e){
             e.printStackTrace();
         }finally {
