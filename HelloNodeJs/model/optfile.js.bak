@@ -1,0 +1,20 @@
+var fs=require("fs");
+module.exports={
+	readfileSync:function(path){
+		var data=fs.readFileSync(path,"utf-8");
+		console.log(data);
+		console.log("Sync is over");
+	},
+	readfile:function(path,recall){
+		fs.readFile(path,function(err,data){
+			if(err){
+				console.log(err);
+			}else{
+				console.log(data.toString());
+				resp.write(data);
+			}
+		});
+		console.log("异步方法执行完毕！！")
+	}
+
+}

@@ -1,0 +1,7 @@
+var User=require("./User");
+function Teacher(id,name,age){
+	User.call(this,id,name,age);
+	this.teach=function(res){
+		res.write(this.name+"讲课")
+	}
+}
