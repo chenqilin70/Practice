@@ -3,6 +3,7 @@ package com.huwl.oracle.practice.test_mybatis.dao;
 import com.huwl.oracle.practice.test_mybatis.beans.Employee;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
 import java.util.Map;
 
 public interface EmployeeMapper {
@@ -22,4 +23,8 @@ public interface EmployeeMapper {
     public Employee getEmpAndDept(Integer id);
 
     public Employee getEmpByStep(Integer id);
+
+    public List<Employee> getEmpsByDeptId(Integer id);
+
+    public Employee getEmpByIdDis(Integer id);
 }

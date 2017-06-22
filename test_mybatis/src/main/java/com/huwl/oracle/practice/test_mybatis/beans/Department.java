@@ -1,11 +1,22 @@
 package com.huwl.oracle.practice.test_mybatis.beans;
 
+import java.util.List;
+
 /**
  * Created by aierxuan on 2017/6/21.
  */
 public class Department {
     private Integer id;
     private String departmentName;
+    private List<Employee> employees;
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
 
     public Integer getId() {
         return id;

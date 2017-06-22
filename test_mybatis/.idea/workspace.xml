@@ -42,6 +42,10 @@
         <option name="myItemId" value="TestMybatis" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tbl_employee" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -65,126 +69,63 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EmployeeMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.java">
+      <file leaf-file-name="EmployeeMapperDynamic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapperDynamic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="32" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DepartmentMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/DepartmentMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mybatis-config.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DepartmentMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/DepartmentMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+            <state relative-caret-position="128">
+              <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
               <folding>
-                <marker date="1498039656494" expanded="true" signature="306:369" ph="select id,de... tbl_dept" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.xml">
+      <file leaf-file-name="EmployeeMapperDynamic.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapperDynamic.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+            <state relative-caret-position="175">
+              <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
               <folding>
-                <marker date="1498040527836" expanded="true" signature="315:358" ph="select id,la... tbl_employee" />
-                <marker date="1498040527836" expanded="true" signature="447:485" ph="select * fro... employee" />
-                <marker date="1498040527836" expanded="true" signature="585:648" ph="select * fro... employee" />
-                <marker date="1498040527836" expanded="true" signature="739:802" ph="select * fro... employee" />
-                <marker date="1498040527836" expanded="true" signature="1944:2103" ph="select e.id tbl_employee" />
-                <marker date="1498040527836" expanded="true" signature="1944:2120" ph="select e.id tbl_employee" />
-                <marker date="1498040527836" expanded="true" signature="2692:2733" ph="select * fro... tbl_employee" />
-                <marker date="1498040527836" expanded="true" signature="2853:2950" ph="insert into tbl_employee... " />
-                <marker date="1498040527836" expanded="true" signature="3162:3293" ph="insert into tbl_employee... " />
-                <marker date="1498040527836" expanded="true" signature="3182:3293" ph="(id,last_nam... " />
-                <marker date="1498040527836" expanded="true" signature="3341:3380" ph="delete from " />
-                <marker date="1498040527836" expanded="true" signature="3431:3533" ph="update tbl_e... " />
+                <marker date="1498128536846" expanded="true" signature="374:400" ph="select * fro... tbl_employee" />
+                <marker date="1498128536846" expanded="true" signature="374:824" ph="select * fro... tbl_employee" />
+                <marker date="1498128536846" expanded="true" signature="1626:1652" ph="select * fro... tbl_employee" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/huwl/oracle/practice/test_mybatis/TestCenter.java">
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/beans/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="185" column="32" lean-forward="true" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
+            <state relative-caret-position="64">
+              <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestMybatis.tbl_dept" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/43fd625e/4d286d11-d667-4e8f-9cb4-13332eaccdc5/TestMybatis.tbl_dept">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Department.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/beans/Department.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#237#238#0" expanded="true" />
-                <element signature="e#274#275#0" expanded="true" />
-                <element signature="e#302#303#0" expanded="true" />
-                <element signature="e#343#344#0" expanded="true" />
-                <element signature="e#380#381#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="TestMybatis.tbl_employee" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/43fd625e/4d286d11-d667-4e8f-9cb4-13332eaccdc5/TestMybatis.tbl_employee">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        </entry>
+      </file>
+      <file leaf-file-name="TestCenter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/huwl/oracle/practice/test_mybatis/TestCenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="296" column="29" lean-forward="true" selection-start-line="296" selection-start-column="29" selection-end-line="296" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -196,9 +137,9 @@
       <list>
         <option value="Tag Library Descriptor" />
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -207,6 +148,10 @@
       <find>D</find>
       <find>DB_</find>
       <find>resultM</find>
+      <find>Step</find>
+      <find>select=</find>
+      <find>getEmpByIdDis</find>
+      <find>getDeptById</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -222,15 +167,18 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapperAnnotation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/beans/Department.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4d286d11-d667-4e8f-9cb4-13332eaccdc5/console_1.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/beans/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/DepartmentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/DepartmentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/huwl/oracle/practice/test_mybatis/TestCenter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/beans/Department.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4d286d11-d667-4e8f-9cb4-13332eaccdc5/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/DepartmentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/DepartmentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapperDynamic.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapperDynamic.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/huwl/oracle/practice/test_mybatis/TestCenter.java" />
       </list>
     </option>
   </component>
@@ -256,7 +204,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
@@ -274,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -425,6 +372,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -459,8 +407,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestCenter.testGetEmpByStep">
-    <configuration default="false" name="TestCenter.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestCenter.testDynamicSqlChoose">
+    <configuration default="false" name="TestCenter.testGetEmpByIdDis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.huwl.oracle.practice.test_mybatis.*" />
@@ -472,59 +420,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.huwl.oracle.practice.test_mybatis" />
       <option name="MAIN_CLASS_NAME" value="com.huwl.oracle.practice.test_mybatis.TestCenter" />
-      <option name="METHOD_NAME" value="testAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestCenter.testMapParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.huwl.oracle.practice.test_mybatis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="test_mybatis" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.huwl.oracle.practice.test_mybatis" />
-      <option name="MAIN_CLASS_NAME" value="com.huwl.oracle.practice.test_mybatis.TestCenter" />
-      <option name="METHOD_NAME" value="testMapParam" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestCenter.testDifEmp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.huwl.oracle.practice.test_mybatis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="test_mybatis" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.huwl.oracle.practice.test_mybatis" />
-      <option name="MAIN_CLASS_NAME" value="com.huwl.oracle.practice.test_mybatis.TestCenter" />
-      <option name="METHOD_NAME" value="testDifEmp" />
+      <option name="METHOD_NAME" value="testGetEmpByIdDis" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -564,7 +460,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestCenter.testGetEmpByStep" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestCenter.testDynamicSqlIf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.huwl.oracle.practice.test_mybatis.*" />
@@ -576,7 +472,59 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.huwl.oracle.practice.test_mybatis" />
       <option name="MAIN_CLASS_NAME" value="com.huwl.oracle.practice.test_mybatis.TestCenter" />
-      <option name="METHOD_NAME" value="testGetEmpByStep" />
+      <option name="METHOD_NAME" value="testDynamicSqlIf" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestCenter.testDynamicSqlTrim" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.huwl.oracle.practice.test_mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="test_mybatis" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.huwl.oracle.practice.test_mybatis" />
+      <option name="MAIN_CLASS_NAME" value="com.huwl.oracle.practice.test_mybatis.TestCenter" />
+      <option name="METHOD_NAME" value="testDynamicSqlTrim" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestCenter.testDynamicSqlChoose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.huwl.oracle.practice.test_mybatis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="test_mybatis" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.huwl.oracle.practice.test_mybatis" />
+      <option name="MAIN_CLASS_NAME" value="com.huwl.oracle.practice.test_mybatis.TestCenter" />
+      <option name="METHOD_NAME" value="testDynamicSqlChoose" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -978,19 +926,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TestCenter.testAdd" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestCenter.testMapParam" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestCenter.testDifEmp" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestCenter.testDeptById" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestCenter.testGetEmpByStep" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.TestCenter.testGetEmpByIdDis" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestCenter.testDeptById" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestCenter.testDynamicSqlIf" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestCenter.testDynamicSqlTrim" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestCenter.testDynamicSqlChoose" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestCenter.testGetEmpByStep" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestCenter.testDeptById" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestCenter.testDifEmp" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestCenter.testAdd" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestCenter.testMapParam" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestCenter.testDynamicSqlChoose" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestCenter.testDynamicSqlTrim" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestCenter.testDynamicSqlIf" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestCenter.testGetEmpByIdDis" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestCenter.testDeptById" />
       </list>
     </recent_temporary>
   </component>
@@ -1013,110 +961,80 @@
       <workItem from="1497954147962" duration="569000" />
       <workItem from="1497954934504" duration="715000" />
       <workItem from="1498029785323" duration="9883000" />
+      <workItem from="1498115128648" duration="11292000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCenter_testDeptById - 2017.06.21 at 18h 02m 37s.xml">
-      <configuration name="TestCenter.testDeptById" configurationId="JUnit" />
+    <history-entry file="TestCenter_testDynamicSqlChoose - 2017.06.22 at 18h 51m 15s.xml">
+      <configuration name="TestCenter.testDynamicSqlChoose" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCenter_testDeptById - 2017.06.21 at 18h 07m 48s.xml">
-      <configuration name="TestCenter.testDeptById" configurationId="JUnit" />
+    <history-entry file="TestCenter_testDynamicSqlChoose - 2017.06.22 at 18h 51m 28s.xml">
+      <configuration name="TestCenter.testDynamicSqlChoose" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCenter_testDifEmp - 2017.06.21 at 17h 53m 47s.xml">
-      <configuration name="TestCenter.testDifEmp" configurationId="JUnit" />
+    <history-entry file="TestCenter_testDynamicSqlChoose - 2017.06.22 at 18h 51m 51s.xml">
+      <configuration name="TestCenter.testDynamicSqlChoose" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCenter_testGetEmpByStep - 2017.06.21 at 18h 23m 45s.xml">
-      <configuration name="TestCenter.testGetEmpByStep" configurationId="JUnit" />
+    <history-entry file="TestCenter_testDynamicSqlIf - 2017.06.22 at 18h 21m 55s.xml">
+      <configuration name="TestCenter.testDynamicSqlIf" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCenter_testGetEmpByStep - 2017.06.21 at 18h 30m 23s.xml">
-      <configuration name="TestCenter.testGetEmpByStep" configurationId="JUnit" />
+    <history-entry file="TestCenter_testDynamicSqlIf - 2017.06.22 at 18h 22m 30s.xml">
+      <configuration name="TestCenter.testDynamicSqlIf" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCenter_testGetEmpByStep - 2017.06.21 at 18h 30m 47s.xml">
-      <configuration name="TestCenter.testGetEmpByStep" configurationId="JUnit" />
+    <history-entry file="TestCenter_testDynamicSqlIf - 2017.06.22 at 18h 23m 00s.xml">
+      <configuration name="TestCenter.testDynamicSqlIf" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCenter_testGetEmpByStep - 2017.06.21 at 18h 31m 11s.xml">
-      <configuration name="TestCenter.testGetEmpByStep" configurationId="JUnit" />
+    <history-entry file="TestCenter_testDynamicSqlIf - 2017.06.22 at 18h 26m 38s.xml">
+      <configuration name="TestCenter.testDynamicSqlIf" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCenter_testGetEmpByStep - 2017.06.21 at 18h 32m 21s.xml">
-      <configuration name="TestCenter.testGetEmpByStep" configurationId="JUnit" />
+    <history-entry file="TestCenter_testDynamicSqlIf - 2017.06.22 at 18h 28m 44s.xml">
+      <configuration name="TestCenter.testDynamicSqlIf" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCenter_testGetEmpByStep - 2017.06.21 at 18h 32m 58s.xml">
-      <configuration name="TestCenter.testGetEmpByStep" configurationId="JUnit" />
+    <history-entry file="TestCenter_testDynamicSqlIf - 2017.06.22 at 18h 38m 27s.xml">
+      <configuration name="TestCenter.testDynamicSqlIf" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCenter_testGetEmpByStep - 2017.06.21 at 18h 34m 08s.xml">
-      <configuration name="TestCenter.testGetEmpByStep" configurationId="JUnit" />
+    <history-entry file="TestCenter_testDynamicSqlTrim - 2017.06.22 at 18h 43m 28s.xml">
+      <configuration name="TestCenter.testDynamicSqlTrim" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32595000" />
+    <option name="totallyTimeSpent" value="43887000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17223382" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47705442" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34460887" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34460887" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13778706" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13778706" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17223382" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47674417" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.50208336" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17223382" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47705442" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34471717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13778706" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1126,7 +1044,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1135,6 +1053,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -1150,18 +1076,20 @@
         <state relative-caret-position="480">
           <caret line="15" column="71" lean-forward="false" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
           <folding>
-            <marker date="1498040527836" expanded="true" signature="315:358" ph="select id,la... tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="447:485" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="585:648" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="739:802" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="1944:2103" ph="select e.id tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="1944:2120" ph="select e.id tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="2692:2733" ph="select * fro... tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="2853:2950" ph="insert into tbl_employee... " />
-            <marker date="1498040527836" expanded="true" signature="3162:3293" ph="insert into tbl_employee... " />
-            <marker date="1498040527836" expanded="true" signature="3182:3293" ph="(id,last_nam... " />
-            <marker date="1498040527836" expanded="true" signature="3341:3380" ph="delete from " />
-            <marker date="1498040527836" expanded="true" signature="3431:3533" ph="update tbl_e... " />
+            <marker date="1498124329382" expanded="true" signature="315:358" ph="select id,la... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="447:485" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="585:648" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="739:802" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="1944:2103" ph="select e.id tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="1944:2120" ph="select e.id tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="2692:2733" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="2854:2897" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="4086:4127" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="4249:4346" ph="insert into tbl_employee... " />
+            <marker date="1498124329382" expanded="true" signature="4558:4689" ph="insert into tbl_employee... " />
+            <marker date="1498124329382" expanded="true" signature="4578:4689" ph="(id,last_nam... " />
+            <marker date="1498124329382" expanded="true" signature="4737:4776" ph="delete from " />
+            <marker date="1498124329382" expanded="true" signature="4827:4929" ph="update tbl_e... " />
           </folding>
         </state>
       </provider>
@@ -1183,15 +1111,15 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/43fd625e/4d286d11-d667-4e8f-9cb4-13332eaccdc5/TestMybatis.tbl_employee">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1199,12 +1127,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1212,7 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,18 +1153,20 @@
         <state relative-caret-position="480">
           <caret line="15" column="71" lean-forward="false" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
           <folding>
-            <marker date="1498040527836" expanded="true" signature="315:358" ph="select id,la... tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="447:485" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="585:648" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="739:802" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="1944:2103" ph="select e.id tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="1944:2120" ph="select e.id tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="2692:2733" ph="select * fro... tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="2853:2950" ph="insert into tbl_employee... " />
-            <marker date="1498040527836" expanded="true" signature="3162:3293" ph="insert into tbl_employee... " />
-            <marker date="1498040527836" expanded="true" signature="3182:3293" ph="(id,last_nam... " />
-            <marker date="1498040527836" expanded="true" signature="3341:3380" ph="delete from " />
-            <marker date="1498040527836" expanded="true" signature="3431:3533" ph="update tbl_e... " />
+            <marker date="1498124329382" expanded="true" signature="315:358" ph="select id,la... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="447:485" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="585:648" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="739:802" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="1944:2103" ph="select e.id tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="1944:2120" ph="select e.id tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="2692:2733" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="2854:2897" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="4086:4127" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="4249:4346" ph="insert into tbl_employee... " />
+            <marker date="1498124329382" expanded="true" signature="4558:4689" ph="insert into tbl_employee... " />
+            <marker date="1498124329382" expanded="true" signature="4578:4689" ph="(id,last_nam... " />
+            <marker date="1498124329382" expanded="true" signature="4737:4776" ph="delete from " />
+            <marker date="1498124329382" expanded="true" signature="4827:4929" ph="update tbl_e... " />
           </folding>
         </state>
       </provider>
@@ -1264,15 +1188,15 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/43fd625e/4d286d11-d667-4e8f-9cb4-13332eaccdc5/TestMybatis.tbl_employee">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1280,12 +1204,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1293,7 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1312,18 +1230,20 @@
         <state relative-caret-position="480">
           <caret line="15" column="71" lean-forward="true" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
           <folding>
-            <marker date="1498040527836" expanded="true" signature="315:358" ph="select id,la... tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="447:485" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="585:648" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="739:802" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="1944:2103" ph="select e.id tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="1944:2120" ph="select e.id tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="2692:2733" ph="select * fro... tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="2853:2950" ph="insert into tbl_employee... " />
-            <marker date="1498040527836" expanded="true" signature="3162:3293" ph="insert into tbl_employee... " />
-            <marker date="1498040527836" expanded="true" signature="3182:3293" ph="(id,last_nam... " />
-            <marker date="1498040527836" expanded="true" signature="3341:3380" ph="delete from " />
-            <marker date="1498040527836" expanded="true" signature="3431:3533" ph="update tbl_e... " />
+            <marker date="1498124329382" expanded="true" signature="315:358" ph="select id,la... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="447:485" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="585:648" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="739:802" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="1944:2103" ph="select e.id tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="1944:2120" ph="select e.id tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="2692:2733" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="2854:2897" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="4086:4127" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="4249:4346" ph="insert into tbl_employee... " />
+            <marker date="1498124329382" expanded="true" signature="4558:4689" ph="insert into tbl_employee... " />
+            <marker date="1498124329382" expanded="true" signature="4578:4689" ph="(id,last_nam... " />
+            <marker date="1498124329382" expanded="true" signature="4737:4776" ph="delete from " />
+            <marker date="1498124329382" expanded="true" signature="4827:4929" ph="update tbl_e... " />
           </folding>
         </state>
       </provider>
@@ -1337,15 +1257,15 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/43fd625e/4d286d11-d667-4e8f-9cb4-13332eaccdc5/TestMybatis.tbl_employee">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1353,12 +1273,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
           <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1389,13 +1304,6 @@
     <entry file="file://$PROJECT_DIR$/conf/mybatis-config.xml" />
     <entry file="file://$PROJECT_DIR$/conf/log4j.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/package-info.java" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4d286d11-d667-4e8f-9cb4-13332eaccdc5/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1.jar!/org/apache/ibatis/binding/MapperProxy.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1450,7 +1358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1458,20 +1365,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/43fd625e/3384429a-4957-4cbc-8023-a3d8282cab6d/STORE.EMPLOYEE">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1479,118 +1384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="1" column="55" lean-forward="true" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/43fd625e/4d286d11-d667-4e8f-9cb4-13332eaccdc5/TestMybatis.tbl_employee">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/43fd625e/4d286d11-d667-4e8f-9cb4-13332eaccdc5/TestMybatis.tbl_dept">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/beans/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="21" />
-          <folding>
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="32" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/DepartmentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/huwl/oracle/practice/test_mybatis/TestCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="185" column="32" lean-forward="true" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/DepartmentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding>
-            <marker date="1498039656494" expanded="true" signature="306:369" ph="select id,de... tbl_dept" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/beans/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding>
-            <marker date="1498040527836" expanded="true" signature="315:358" ph="select id,la... tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="447:485" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="585:648" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="739:802" ph="select * fro... employee" />
-            <marker date="1498040527836" expanded="true" signature="1944:2103" ph="select e.id tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="1944:2120" ph="select e.id tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="2692:2733" ph="select * fro... tbl_employee" />
-            <marker date="1498040527836" expanded="true" signature="2853:2950" ph="insert into tbl_employee... " />
-            <marker date="1498040527836" expanded="true" signature="3162:3293" ph="insert into tbl_employee... " />
-            <marker date="1498040527836" expanded="true" signature="3182:3293" ph="(id,last_nam... " />
-            <marker date="1498040527836" expanded="true" signature="3341:3380" ph="delete from " />
-            <marker date="1498040527836" expanded="true" signature="3431:3533" ph="update tbl_e... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1598,6 +1391,137 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/43fd625e/4d286d11-d667-4e8f-9cb4-13332eaccdc5/TestMybatis.tbl_dept">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4d286d11-d667-4e8f-9cb4-13332eaccdc5/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/beans/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/DepartmentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+          <folding>
+            <marker date="1498124329382" expanded="true" signature="315:358" ph="select id,la... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="447:485" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="585:648" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="739:802" ph="select * fro... employee" />
+            <marker date="1498124329382" expanded="true" signature="1944:2103" ph="select e.id tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="1944:2120" ph="select e.id tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="2692:2733" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="2854:2897" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="4086:4127" ph="select * fro... tbl_employee" />
+            <marker date="1498124329382" expanded="true" signature="4249:4346" ph="insert into tbl_employee... " />
+            <marker date="1498124329382" expanded="true" signature="4558:4689" ph="insert into tbl_employee... " />
+            <marker date="1498124329382" expanded="true" signature="4578:4689" ph="(id,last_nam... " />
+            <marker date="1498124329382" expanded="true" signature="4737:4776" ph="delete from " />
+            <marker date="1498124329382" expanded="true" signature="4827:4929" ph="update tbl_e... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/DepartmentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <marker date="1498124117114" expanded="true" signature="307:370" ph="select id,de... tbl_dept" />
+            <marker date="1498124117114" expanded="true" signature="1077:1286" ph="select d.id tbl_dept" />
+            <marker date="1498124117114" expanded="true" signature="1808:1857" ph="select id,de... tbl_dept" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/beans/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapperDynamic.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <marker date="1498128536846" expanded="true" signature="374:400" ph="select * fro... tbl_employee" />
+            <marker date="1498128536846" expanded="true" signature="374:824" ph="select * fro... tbl_employee" />
+            <marker date="1498128536846" expanded="true" signature="1626:1652" ph="select * fro... tbl_employee" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/43fd625e/4d286d11-d667-4e8f-9cb4-13332eaccdc5/TestMybatis.tbl_employee">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/practice/test_mybatis/dao/EmployeeMapperDynamic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/huwl/oracle/practice/test_mybatis/TestCenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="296" column="29" lean-forward="true" selection-start-line="296" selection-start-column="29" selection-end-line="296" selection-end-column="29" />
           <folding />
         </state>
       </provider>

@@ -50,6 +50,35 @@
     <select id="getEmpByStep" resultMap="MyEmpByStep">
         select * from tbl_employee where id=#{id}
     </select>
+    <select id="getEmpsByDeptId" resultType="com.huwl.oracle.practice.test_mybatis.beans.Employee">
+      select * from tbl_employee where d_id=#{id}
+    </select>
+
+    <resultMap id="MyEmpDis" type="com.huwl.oracle.practice.test_mybatis.beans.Employee">
+        <id column="id" property="id"></id>
+        <result column="last_name" property="lastName"/>
+        <result column="gender" property="gender"></result>
+        <result column="email" property="email" ></result>
+
+        <discriminator javaType="string" column="gender">
+            <case  value="0" resultType="com.huwl.oracle.practice.test_mybatis.beans.Employee">
+                <association property="dept"
+                             select="com.huwl.oracle.practice.test_mybatis.dao.DepartmentMapper.getDeptById"
+                             column="d_id" ></association>
+            </case>
+            <case  value="1" resultType="com.huwl.oracle.practice.test_mybatis.beans.Employee">
+                <id column="id" property="id"></id>
+                <result column="last_name" property="lastName"/>
+                <result column="gender" property="gender"></result>
+                <result column="last_name" property="email" ></result>
+            </case>
+        </discriminator>
+    </resultMap>
+    <select resultMap="MyEmpDis" id="getEmpByIdDis">
+        select * from tbl_employee where id=#{id}
+    </select>
+
+
     <insert id="addEmp" useGeneratedKeys="true"
             keyProperty="id" databaseId="mysql">
         insert into tbl_employee(last_name, gender, email)

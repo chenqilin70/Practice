@@ -5,6 +5,7 @@ import com.huwl.oracle.practice.test_mybatis.beans.Employee;
 import com.huwl.oracle.practice.test_mybatis.dao.DepartmentMapper;
 import com.huwl.oracle.practice.test_mybatis.dao.EmployeeMapper;
 import com.huwl.oracle.practice.test_mybatis.dao.EmployeeMapperAnnotation;
+import com.huwl.oracle.practice.test_mybatis.dao.EmployeeMapperDynamic;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -17,6 +18,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -187,6 +189,111 @@ public class TestCenter {
             EmployeeMapper mapper=session.getMapper(EmployeeMapper.class);
             Employee employee=mapper.getEmpByStep(1);
             System.out.println(employee.getDept().getId());
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testCollection(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            DepartmentMapper mapper=session.getMapper(DepartmentMapper.class);
+            Department department=mapper.getDeptByIdPlus(2);
+            System.out.println(department.getEmployees().size());
+            for(Employee e : department.getEmployees()){
+                System.out.println(e);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testGetEmpsByDeptId(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapper mapper=session.getMapper(EmployeeMapper.class);
+            List<Employee> emps=mapper.getEmpsByDeptId(2);
+            System.out.println(emps);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testCollectionStep(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            DepartmentMapper mapper=session.getMapper(DepartmentMapper.class);
+            Department department=mapper.getDeptByIdStep(2);
+            System.out.println(department.getEmployees().size());
+            for(Employee e : department.getEmployees()){
+                System.out.println(e);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testGetEmpByIdDis(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapper mapper=session.getMapper(EmployeeMapper.class);
+            Employee employee=mapper.getEmpByIdDis(5);
+            System.out.println(employee);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testDynamicSqlIf(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapperDynamic mapper=session.getMapper(EmployeeMapperDynamic.class);
+            List<Employee> emps=mapper.getEmpsByConditioinIf(new Employee(null,"%tom%","  ",null));
+            System.out.println(emps);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testDynamicSqlTrim(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapperDynamic mapper=session.getMapper(EmployeeMapperDynamic.class);
+            List<Employee> emps=mapper.getEmpsByConditioinTrim(new Employee(null,"%tom%","  ",null));
+            System.out.println(emps);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testDynamicSqlChoose(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapperDynamic mapper=session.getMapper(EmployeeMapperDynamic.class);
+            List<Employee> emps=mapper.getEmpsByConditioinChoose(new Employee(1,"%tom%",null,null));
+            System.out.println(emps);
         }catch (Exception e){
             e.printStackTrace();
         }finally {
