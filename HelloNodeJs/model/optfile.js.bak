@@ -11,10 +11,14 @@ module.exports={
 				console.log(err);
 			}else{
 				console.log(data.toString());
-				resp.write(data);
+				recall(data)
 			}
 		});
 		console.log("异步方法执行完毕！！")
+	},
+	writefileSync:function(path){
+		console.log("Sync write is not coded")
 	}
+
 
 }

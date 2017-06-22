@@ -15,6 +15,13 @@ module.exports={
 			}
 		});
 		console.log("异步方法执行完毕！！")
+	},
+	writefileSync:function(path){
+		console.log("Sync write is not coded")
+	},
+	writefile:function(path){
+		
 	}
+
 
 }

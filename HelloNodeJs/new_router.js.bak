@@ -3,13 +3,16 @@ function recall(data){
 	this.write(data);
 	this.end();
 }
-module.exports={
-	login:function(resp){
-		var readyRecall=recall.bind(resp)
-		fileread.readFile("./views/login.html",recall);
-	},
-	register:function(resp){
-		var readyRecall=recall.bind(resp)
-		fileread.readFile("./views/register.html",recall);
-	}
+var Router=function(resp){
+	this.recall=recall.bind(resp);
 }
+Router.prototype.login=function(){
+		fileread.readFile("./views/login.html",this.recall);
+	}
+Router.prototype.register=function(){
+		fileread.readFile("./views/register.html",this.recall);
+	}
+Router.prototype.writefile=function(){
+		fileread.writeFile("./uploadFile/"+new Date().getTime()+".txt",new Date().getTime().toString(),this.recall)
+}
+module.exports=Router;

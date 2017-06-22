@@ -6,11 +6,20 @@ module.exports={
 	readFile:function(path,recall){
 		fs.readFile(path,function(err,data){
 			if(err){
-				console.log(err)
+				throw err;
 			}else{
 				recall(data);	
 			}
 
+		})
+	},
+	writeFile:function(path,data,recall){
+		fs.writeFile(path,data,function(err){
+			if(err){
+				throw err;
+			}else{
+				recall("写文件成功！！");
+			}
 		})
 	}
 }
