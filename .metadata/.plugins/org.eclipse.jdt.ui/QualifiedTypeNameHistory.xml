@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.view.View"/>
-<fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.huwl.oracle.app02_activity.SecondActivity"/>
 <fullyQualifiedTypeName name="com.huwl.oracle.app02_activity.MainActivity"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="com.huwl.oracle.callhelperapp.R.layout"/>
+<fullyQualifiedTypeName name="com.huwl.oracle.callhelperapp.R.id"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="com.huwl.oracle.callhelperapp.MainActivity"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="android.telephony.SmsManager"/>
 </qualifiedTypeNameHistroy>
