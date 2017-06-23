@@ -57,4 +57,47 @@
        </where>
 
     </select>
+    <update id="updateEmp">
+        update tbl_employee
+        <set>
+            <if test="lastName!=null">
+                last_name =#{lastName} ,
+            </if>
+            <if test="email!=null">
+                email =#{email} ,
+            </if>
+            <if test="gender!=null">
+                gender=#{gender}
+            </if>
+        </set>
+        <where>
+          id =#{id}
+        </where>
+    </update>
+    <select id="getEmpsByIdForeach"
+            resultType="com.huwl.oracle.practice.test_mybatis.beans.Employee" >
+      select * from tbl_employee where id
+      <foreach collection="list" open="in(" close=")" item="emp_id" separator=",">
+          #{emp_id}
+      </foreach>
+    </select>
+    <insert id="addEmps" >
+        insert into tbl_employee(last_name, gender, email, d_id)
+        VALUES
+        <foreach collection="list" separator="," item="e">
+            (#{e.lastName},#{e.gender},#{e.email},#{e.dept.id})
+        </foreach>
+    </insert>
+    <!--<insert id="addEmps" >-->
+
+        <!--<foreach collection="list" separator=";" item="e">-->
+            <!--insert into tbl_employee(last_name, gender, email, d_id)-->
+            <!--VALUES (#{e.lastName},#{e.gender},#{e.email},#{e.dept.id})-->
+        <!--</foreach>-->
+
+    <!--</insert>-->
+    <select id="getEmpsUseBind" resultType="com.huwl.oracle.practice.test_mybatis.beans.Employee">
+        <bind name="_lastName" value="'%'+lastName+'%'"></bind>
+        select * from tbl_employee where last_name like #{_lastName }
+    </select>
 </mapper>

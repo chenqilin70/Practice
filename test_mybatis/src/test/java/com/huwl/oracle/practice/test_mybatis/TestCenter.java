@@ -6,6 +6,7 @@ import com.huwl.oracle.practice.test_mybatis.dao.DepartmentMapper;
 import com.huwl.oracle.practice.test_mybatis.dao.EmployeeMapper;
 import com.huwl.oracle.practice.test_mybatis.dao.EmployeeMapperAnnotation;
 import com.huwl.oracle.practice.test_mybatis.dao.EmployeeMapperDynamic;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -17,6 +18,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -294,6 +296,67 @@ public class TestCenter {
             EmployeeMapperDynamic mapper=session.getMapper(EmployeeMapperDynamic.class);
             List<Employee> emps=mapper.getEmpsByConditioinChoose(new Employee(1,"%tom%",null,null));
             System.out.println(emps);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testDynamicUpdateEmp(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapperDynamic mapper=session.getMapper(EmployeeMapperDynamic.class);
+            mapper.updateEmp(new Employee(1,"rose","rose@qq.com",null));
+            session.commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testGetEmpByIdForeach(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapperDynamic mapper=session.getMapper(EmployeeMapperDynamic.class);
+            List<Employee> employees=mapper.getEmpsByIdForeach(Arrays.asList(1,2,3,4));
+            System.out.println(employees);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testAddEmps(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapperDynamic mapper=session.getMapper(EmployeeMapperDynamic.class);
+            List<Employee> list=Arrays.asList(
+                    new Employee("lina1","lina1@qq.com","0"),
+                    new Employee("lina2","lina2@qq.com","0"),
+                    new Employee("lina3","lina3@qq.com","0")
+            );
+            mapper.addEmps(list);
+            session.commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+    @Test
+    public void testgetEmpsUseBind(){
+        SqlSession session=null;
+        try{
+            session=factory.openSession();
+            EmployeeMapperDynamic mapper=session.getMapper(EmployeeMapperDynamic.class);
+            List<Employee> list=mapper.getEmpsUseBind(new Employee("r",null,null));
+            System.out.println(list);
         }catch (Exception e){
             e.printStackTrace();
         }finally {
