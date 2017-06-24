@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+D:\WorkFile\GitRepository\Practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\226834039.index
+\MyBatis_06_ssm\src
+D:\WorkFile\GitRepository\Practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3688004436.index
+\MyBatis_06_ssm\src

@@ -1,11 +1,14 @@
 package com.huwl.oracle.practice.test_mybatis.beans;
 
+import com.sun.xml.internal.ws.encoding.soap.SerializerConstants;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by aierxuan on 2017/6/21.
  */
-public class Department {
+public class Department implements Serializable{
     private Integer id;
     private String departmentName;
     private List<Employee> employees;

@@ -3,6 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.huwl.oracle.practice.test_mybatis.dao.EmployeeMapper">
+    <!--<cache eviction="FIFO"-->
+           <!--flushInterval="60000"-->
+           <!--readOnly="false"-->
+           <!--size="1024"-->
+           <!---->
+           <!--&gt;</cache>-->
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache">
+    </cache>
+
+
     <select id="getEmpById" resultType="emp" databaseId="mysql">
         select * from tbl_employee where id = #{id}
     </select>
