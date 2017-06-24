@@ -1,0 +1,11 @@
+package com.huwl.oracle.componenttestapp;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class SimpleComponentActivity extends Activity {
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+	}
+}

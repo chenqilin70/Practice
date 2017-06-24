@@ -1,7 +1,7 @@
 var fs=require('fs');
 module.exports={
 	readFileSync:function(){
-		console.log("同步方法暂不提供")
+		console.log("同步读取方法暂不提供")
 	},
 	readFile:function(path,recall){
 		fs.readFile(path,function(err,data){
@@ -20,6 +20,16 @@ module.exports={
 			}else{
 				recall("写文件成功！！");
 			}
+		})
+	},
+	readImage:function(path,recall){
+		fs.readFile(path,'binary',function(err,fileData){
+			if(err){
+				throw err;
+			}else{
+				recall(fileData);
+			}
+
 		})
 	}
 }
