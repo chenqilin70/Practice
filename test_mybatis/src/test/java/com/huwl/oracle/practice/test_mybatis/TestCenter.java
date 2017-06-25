@@ -54,7 +54,6 @@ public class TestCenter {
         try{
             session=factory.openSession();
             EmployeeMapper mapper=session.getMapper(EmployeeMapper.class);
-
             System.out.println(mapper.getEmpById(1));
         }catch (Exception e){
             e.printStackTrace();

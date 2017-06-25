@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://120.24.244.103:3306/TestMybatis?"
+                        userId="kylin"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+        <!--javabean 所在目录-->
+        <javaModelGenerator
+                targetPackage="com.huwl.oracle.practice.test_mbg.bean"
+                targetProject=".\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <!--mapper.xml 文件所在目录-->
+        <sqlMapGenerator
+                targetPackage="com.huwl.oracle.practice.test_mbg.dao"
+                targetProject=".\src\main\resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+        <!--*Mapper.java 文件所在目录-->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.huwl.oracle.practice.test_mbg.dao"
+                             targetProject=".\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <table tableName="tbl_dept"
+               domainObjectName="Department">
+
+        </table>
+        <table tableName="tbl_employee"
+               domainObjectName="Employee">
+
+        </table>
+
+    </context>
+</generatorConfiguration>
