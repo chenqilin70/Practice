@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="android.intent.action.SEND" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="default"/>
 			<item value="android.intent.action.SEND"/>
 			<item value="ComposeMessageActivity"/>
 			<item value="sms"/>
@@ -15,7 +16,6 @@
 			<item value="ACTION_MS"/>
 			<item value="ACTION_SMS"/>
 			<item value="ACTION_ME"/>
-			<item value="ACTION_M"/>
 		</list>
 		<list key="replacehistory">
 		</list>

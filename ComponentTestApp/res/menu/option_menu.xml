@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/xmladd" android:title="xml添加"></item>
+    <item android:id="@+id/xmldelete" android:title="xml删除"/>
+
+</menu>

@@ -26,6 +26,14 @@
             android:name=".SimpleComponentActivity"
             android:label="@string/title_activity_simple_component" >
         </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/title_activity_menu" >
+        </activity>
+        <activity
+            android:name=".ProgressActivity"
+            android:label="@string/title_activity_progress" >
+        </activity>
     </application>
 
 </manifest>

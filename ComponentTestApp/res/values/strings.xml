@@ -4,5 +4,7 @@
     <string name="app_name">ComponentTestApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_simple_component">SimpleComponentActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_progress">ProgressActivity</string>
 
 </resources>

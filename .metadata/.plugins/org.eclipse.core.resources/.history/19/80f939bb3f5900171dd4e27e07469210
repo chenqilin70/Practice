@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+	<TextView android:id="@+id/tv_simple_message"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="这是TextView内容"
+	    android:background="#999999"
+	    android:textColor="#ffffff"
+	    android:textSize="20sp"/>
+	<EditText android:id="@+id/et_simple"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:hint="pleace input phoneNum"
+	    android:inputType="textPassword"/>
+	<ImageView android:id="@+id/imgView_simple"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@android:drawable/alert_dark_frame"
+	    android:src="@android:drawable/ic_media_play" />
+
+	<!-- 
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" 
+	    android:orientation="horizontal">
+	    
+	    <CheckBox android:id="@+id/loveBasketball"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="篮球"
+	        android:checked="true"/>
+	    <CheckBox android:id="@+id/lovePingPangball"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="乒乓球"
+	        android:checked="false"/>
+	    <CheckBox android:id="@+id/loveWangball"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="网球"
+	        android:checked="false"/>
+	</LinearLayout>
+	 -->
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+		<TextView
+		    android:id="@+id/textView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="爱好" />
+
+		<CheckBox
+		    android:id="@+id/checkBox1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="cb1" />
+
+		<CheckBox
+		    android:id="@+id/checkBox2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="cb2" />
+		<CheckBox android:id="@+id/testR"/>
+
+	</LinearLayout>
+
+</LinearLayout>
