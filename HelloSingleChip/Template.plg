@@ -1,0 +1,1043 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\WorkFile\GitRepository\Practice\HelloSingleChip\Template.uvproj
+Project File Date:  06/27/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(3): error C141: syntax error near '}'
+MAIN.C(4): error C141: syntax error near '1'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(4): error C141: syntax error near '}'
+MAIN.C(5): error C141: syntax error near '1'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(4): error C141: syntax error near '}'
+MAIN.C(5): error C141: syntax error near '1'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(4): error C141: syntax error near '}'
+MAIN.C(5): error C141: syntax error near '1'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(4): error C141: syntax error near '}'
+MAIN.C(5): error C141: syntax error near '1'
+Target not created
+compiling main.c...
+MAIN.C(4): error C141: syntax error near '}'
+MAIN.C(5): error C141: syntax error near '1'
+main.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(4): error C141: syntax error near '}'
+MAIN.C(5): error C141: syntax error near '1'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(4): error C141: syntax error near '}'
+MAIN.C(5): error C141: syntax error near '1'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(4): error C141: syntax error near '}'
+MAIN.C(6): error C129: missing ';' before '{'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(4): error C141: syntax error near '}'
+MAIN.C(6): error C129: missing ';' before '{'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(5): error C202: 'true': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=17
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=17
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=19
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=19
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=19
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=19
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(6): error C141: syntax error near 'int'
+MAIN.C(6): error C202: 'i': undefined identifier
+MAIN.C(6): error C202: 'i': undefined identifier
+MAIN.C(6): error C202: 'i': undefined identifier
+MAIN.C(6): error C141: syntax error near ')'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(6): error C141: syntax error near 'int'
+MAIN.C(6): error C202: 'i': undefined identifier
+MAIN.C(7): error C202: 'i': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(6): error C141: syntax error near 'int'
+MAIN.C(6): error C202: 'i': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=153
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=176
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=176
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=209
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=11.0 xdata=0 code=209
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=176
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=208
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=176
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=177
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=209
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=182
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=203
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=46
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=46
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(12): warning C206: '_nop_': missing function-prototype
+MAIN.C(12): error C264: intrinsic '_nop_': declaration/activation error
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=41
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(3): error C141: syntax error near '[', expected '='
+MAIN.C(3): error C141: syntax error near ']', expected ';'
+MAIN.C(12): error C202: 'ledArr': undefined identifier
+MAIN.C(13): error C202: 'ledArr': undefined identifier
+MAIN.C(14): error C202: 'ledArr': undefined identifier
+MAIN.C(15): error C202: 'ledArr': undefined identifier
+MAIN.C(16): error C202: 'ledArr': undefined identifier
+MAIN.C(17): error C202: 'ledArr': undefined identifier
+MAIN.C(18): error C202: 'ledArr': undefined identifier
+MAIN.C(19): error C202: 'ledArr': undefined identifier
+MAIN.C(24): error C141: syntax error near 'unsigned'
+MAIN.C(24): error C202: 'i': undefined identifier
+MAIN.C(25): error C202: 'i': undefined identifier
+MAIN.C(26): error C202: 'i': undefined identifier
+MAIN.C(28): error C202: 'i': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(3): error C141: syntax error near '[', expected '='
+MAIN.C(3): error C141: syntax error near ']', expected ';'
+MAIN.C(3): error C129: missing ';' before '^'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(3): error C141: syntax error near '[', expected '='
+MAIN.C(3): error C141: syntax error near '}', expected ';'
+MAIN.C(16): error C202: 'ledArr': undefined identifier
+MAIN.C(18): error C202: 'ledArr': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(3): error C141: syntax error near '[', expected '<id>'
+MAIN.C(7): error C129: missing ';' before '>'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(14): error C141: syntax error near 'sbit'
+MAIN.C(14): error C202: 'ledArr': undefined identifier
+MAIN.C(14): error C141: syntax error near '{'
+MAIN.C(14): error C141: syntax error near '}'
+MAIN.C(15): error C141: syntax error near 'unsigned'
+MAIN.C(16): error C202: 'i': undefined identifier
+MAIN.C(17): error C202: 'i': undefined identifier
+MAIN.C(19): error C202: 'i': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(14): error C141: syntax error near 'sbit'
+MAIN.C(14): error C141: syntax error near '}'
+MAIN.C(15): error C141: syntax error near 'unsigned'
+MAIN.C(15): error C202: 'i': undefined identifier
+MAIN.C(16): error C202: 'i': undefined identifier
+MAIN.C(17): error C202: 'i': undefined identifier
+MAIN.C(19): error C202: 'i': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(3): error C141: syntax error near '{'
+MAIN.C(3): error C141: syntax error near '}', expected ';'
+MAIN.C(17): error C202: 'ledArr': undefined identifier
+MAIN.C(19): error C202: 'ledArr': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(3): error C141: syntax error near '[', expected '='
+MAIN.C(3): error C141: syntax error near ']', expected ';'
+MAIN.C(3): error C129: missing ';' before '^'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(3): error C141: syntax error near '[', expected '='
+MAIN.C(3): error C141: syntax error near ']', expected ';'
+MAIN.C(3): error C129: missing ';' before '^'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(4): error C202: 'led1': undefined identifier
+MAIN.C(14): error C141: syntax error near 'sbit'
+MAIN.C(15): error C202: 's': undefined identifier
+MAIN.C(16): error C141: syntax error near 'void'
+MAIN.C(17): error C202: 's': undefined identifier
+MAIN.C(23): error C202: 'led0': undefined identifier
+MAIN.C(24): error C202: 'led1': undefined identifier
+MAIN.C(25): error C202: 'led2': undefined identifier
+MAIN.C(26): error C202: 'led3': undefined identifier
+MAIN.C(27): error C202: 'led4': undefined identifier
+MAIN.C(28): error C202: 'led5': undefined identifier
+MAIN.C(29): error C202: 'led6': undefined identifier
+MAIN.C(30): error C202: 'led7': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(4): error C202: 'led1': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=29
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=29
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(22): error C141: syntax error near 'sbit'
+MAIN.C(23): error C202: 's': undefined identifier
+MAIN.C(24): error C141: syntax error near 'void'
+MAIN.C(25): error C202: 's': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(22): error C141: syntax error near 'sbit'
+MAIN.C(23): error C202: 's': undefined identifier
+MAIN.C(25): error C202: 's': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(22): error C141: syntax error near 'sbit'
+MAIN.C(23): error C141: syntax error near 'sbit'
+MAIN.C(25): error C141: syntax error near 'sbit'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(3): error C141: syntax error near 'sbit'
+MAIN.C(4): error C202: 'led0': undefined identifier
+MAIN.C(22): error C141: syntax error near 's', expected ')'
+MAIN.C(23): error C202: 's': undefined identifier
+MAIN.C(25): error C202: 's': undefined identifier
+MAIN.C(32): error C202: 'led0': undefined identifier
+MAIN.C(33): error C202: 'led1': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(28): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0006H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 000DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0014H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 001BH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0022H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0029H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0030H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0037H
+Program Size: data=9.0 xdata=0 code=86
+creating hex file from "Template"...
+"Template" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(27): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0006H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 000DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0014H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 001BH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0022H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0029H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0030H
+Program Size: data=9.0 xdata=0 code=79
+creating hex file from "Template"...
+"Template" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(34): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0006H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 000DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0014H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 001BH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0022H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0029H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0030H
+Program Size: data=9.0 xdata=0 code=81
+creating hex file from "Template"...
+"Template" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(34): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0021H
+Program Size: data=9.0 xdata=0 code=39
+creating hex file from "Template"...
+"Template" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(36): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0021H
+Program Size: data=9.0 xdata=0 code=39
+creating hex file from "Template"...
+"Template" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(36): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0015H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 001AH
+Program Size: data=9.0 xdata=0 code=42
+creating hex file from "Template"...
+"Template" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(35): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 001CH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0021H
+Program Size: data=11.0 xdata=0 code=49
+creating hex file from "Template"...
+"Template" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=11.0 xdata=0 code=90
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(35): error C141: syntax error near 'void'
+MAIN.C(37): error C141: syntax error near 'void'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(35): error C202: 'null': undefined identifier
+MAIN.C(37): error C141: syntax error near 'void'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=49
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=49
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=40
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(31): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 000DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0014H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 001BH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0022H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0029H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0030H
+Program Size: data=9.0 xdata=0 code=79
+creating hex file from "Template"...
+"Template" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(28): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 000DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0014H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 001BH
+Program Size: data=9.0 xdata=0 code=56
+creating hex file from "Template"...
+"Template" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(26): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 000DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0012H
+Program Size: data=9.0 xdata=0 code=47
+creating hex file from "Template"...
+"Template" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(24): warning C206: 'delay500m': missing function-prototype
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DELAY500M
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0018H
+Program Size: data=9.0 xdata=0 code=40
+creating hex file from "Template"...
+"Template" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=79
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=80
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=76
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(17): warning C275: expression with possibly no effect
+MAIN.C(17): error C141: syntax error near '='
+MAIN.C(21): error C141: syntax error near '='
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(3): warning C318: can't open file 'instrins.h'
+MAIN.C(18): warning C275: expression with possibly no effect
+MAIN.C(18): error C141: syntax error near '='
+MAIN.C(22): error C141: syntax error near '='
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(17): warning C275: expression with possibly no effect
+MAIN.C(17): error C141: syntax error near '='
+MAIN.C(21): error C141: syntax error near '='
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(17): warning C275: expression with possibly no effect
+MAIN.C(17): error C141: syntax error near '='
+MAIN.C(21): error C141: syntax error near '='
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=57
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=50
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=51
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=61
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=61
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=10.0 xdata=0 code=43
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=10.0 xdata=0 code=46
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=74
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=74
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=77
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=80
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=79
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(12): error C141: syntax error near '}'
+MAIN.C(38): error C141: syntax error near '/'
+MAIN.C(40): error C141: syntax error near '=', expected ')'
+MAIN.C(40): error C129: missing ';' before '<'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(12): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(12): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=51
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=56
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=57
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=79
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=79
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=79
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=80
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=80
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=80
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=43
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=34
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=34
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=34
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=31
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=34
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=34
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=34
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=20
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=34
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?MAIN
+Program Size: data=9.0 xdata=0 code=29
+creating hex file from "Template"...
+"Template" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=32
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=32
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=32
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=31
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=31
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=19
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=43
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=68
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=68
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=11.0 xdata=0 code=68
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(14): error C202: 'p2': undefined identifier
+MAIN.C(16): error C202: 'p2': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=37
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=55
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=37
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=37
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=37
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=37
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=37
+creating hex file from "Template"...
+"Template" - 0 Error(s), 0 Warning(s).

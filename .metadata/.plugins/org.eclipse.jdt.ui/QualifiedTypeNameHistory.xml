@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="com.huwl.oracle.callhelperapp.MainActivity"/>
 <fullyQualifiedTypeName name="android.net.Uri"/>
 <fullyQualifiedTypeName name="android.telephony.SmsManager"/>
-<fullyQualifiedTypeName name="com.huwl.oracle.componenttestapp.R.layout"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="android.widget.ImageView"/>
@@ -30,7 +29,6 @@
 <fullyQualifiedTypeName name="android.view.Menu"/>
 <fullyQualifiedTypeName name="android.view.MenuInflater"/>
 <fullyQualifiedTypeName name="com.huwl.oracle.componenttestapp.R.menu"/>
-<fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="android.view.View.OnCreateContextMenuListener"/>
 <fullyQualifiedTypeName name="android.widget.SeekBar"/>
 <fullyQualifiedTypeName name="com.huwl.oracle.componenttestapp.R.id"/>
@@ -38,5 +36,16 @@
 <fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="android.widget.ProgressBar"/>
 <fullyQualifiedTypeName name="android.widget.LinearLayout"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="java.lang.CharSequence"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface"/>
+<fullyQualifiedTypeName name="com.huwl.oracle.componenttestapp.DialogActivity"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="android.widget.TabHost"/>
+<fullyQualifiedTypeName name="com.huwl.oracle.componenttestapp.ToastUtil"/>
+<fullyQualifiedTypeName name="com.huwl.oracle.componenttestapp.R.layout"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
 <fullyQualifiedTypeName name="android.view.View"/>
 </qualifiedTypeNameHistroy>
