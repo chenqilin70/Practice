@@ -1,0 +1,8 @@
+package com.huwl.oracle.wechat.catcher.user_catcher;
+
+public class Comment {
+	private String nickName;
+	private String remark;
+	private String content;
+	private String postTime;
+}

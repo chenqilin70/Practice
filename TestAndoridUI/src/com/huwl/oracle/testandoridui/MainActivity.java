@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
     public void openMyAlertDialog(View v){
-    	View dialog=View.inflate(this, resource, null);
+    	View dialog=View.inflate(this, R.layout.dialog, null);
     	new AlertDialog.Builder(this)
     		.setView(dialog)	
     		.show();

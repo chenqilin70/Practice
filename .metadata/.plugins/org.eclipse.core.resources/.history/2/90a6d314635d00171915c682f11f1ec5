@@ -1,0 +1,15 @@
+package com.huwl.oracle.wechat.catcher.user_catcher;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+
+
+
+
+public class TestWechat {
+public static void main(String[] args) {
+	System.out.println(new SimpleDateFormat("yyyy-MM-dd").parse("2017-06-30"));
+}
+}

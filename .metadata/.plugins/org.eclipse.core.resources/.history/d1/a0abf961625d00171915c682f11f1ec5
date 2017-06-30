@@ -1,0 +1,8 @@
+package com.huwl.oracle.wechat.catcher.user_catcher;
+
+
+public class TestWechat {
+public static void main(String[] args) {
+	System.out.println(new java.util.Date().getTime());
+}
+}
