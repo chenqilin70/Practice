@@ -38,10 +38,13 @@ public class Main {
 	public static final String USER_LIST_PARAM="user_list_param.properties";
 	public static final Scanner scan=new Scanner(System.in);
 	public static final String COOKIES;
+	public static final String TOKEN;
 	public static StringBuffer result=new StringBuffer("");
 	static{
 		System.out.println("请输入cookies：");
 		COOKIES=scan.nextLine();
+		System.out.println("请输入token：");
+		TOKEN=scan.nextLine();
 	}
 	public static void main(String[] args) {
 		System.out.println("请输入您要扫描的起始页：");
@@ -65,15 +68,12 @@ public class Main {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 	
 	
 	private static JsonNode getUsersRoot(int begin) {
 		String content=getStr(USER_LIST_URL, USER_LIST_HEAD, USER_LIST_PARAM, new BasicNameValuePair("begin", ""+begin));
 		int search_key_index=content.indexOf("search_key");
-		
 		String search_key=content.substring(search_key_index, content.indexOf("seajs.use", search_key_index));
 		String listUser=search_key.substring(search_key.indexOf("list")+5, search_key.lastIndexOf("};")).trim();
 		JsonNode usersRoot=null;
@@ -136,6 +136,7 @@ public class Main {
 		List<BasicHeader> headers=getPropertiesList(BasicHeader.class, headerFile);
 		headers.add(new BasicHeader("Cookie", COOKIES));
 		List<BasicNameValuePair> params=getPropertiesList(BasicNameValuePair.class,paramFile );
+		params.add(new BasicNameValuePair("token", TOKEN));
 		CloseableHttpResponse  response=null;
 		try {
 			if(nameValuePair!=null)
@@ -173,6 +174,7 @@ public class Main {
 		List<BasicHeader> headers=getPropertiesList(BasicHeader.class, headerFile);
 		headers.add(new BasicHeader("Cookie", COOKIES));
 		List<BasicNameValuePair> params=getPropertiesList(BasicNameValuePair.class,paramFile );
+		params.add(new BasicNameValuePair("token", TOKEN));
 		CloseableHttpResponse  response=null;
 		try {
 			URIBuilder uriBuilder=new URIBuilder(uri);

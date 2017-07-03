@@ -1,0 +1,7 @@
+action=list_latest_comment
+#begin=10
+count=10
+filtertype=0
+day=0
+token=611826646
+lang=zh_CN
