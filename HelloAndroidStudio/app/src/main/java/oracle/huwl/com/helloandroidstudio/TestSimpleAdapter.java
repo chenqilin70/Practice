@@ -1,5 +1,6 @@
 package oracle.huwl.com.helloandroidstudio;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class TestSimpleAdapter extends AppCompatActivity {
+public class TestSimpleAdapter extends Activity {
     private ListView lv_simple_adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

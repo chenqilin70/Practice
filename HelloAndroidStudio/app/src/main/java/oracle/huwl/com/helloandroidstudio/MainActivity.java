@@ -19,7 +19,7 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     private AlertDialog myDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

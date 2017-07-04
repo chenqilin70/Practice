@@ -1,5 +1,6 @@
 package oracle.huwl.com.helloandroidstudio;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,7 +10,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class TestListView extends AppCompatActivity {
+public class TestListView extends Activity {
     private ListView list_view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

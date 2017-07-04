@@ -25,5 +25,8 @@
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:textSize">25sp</item>
     </style>
+    <style name="myTheme">
+        <item name="android:textColor">#ff0000</item>
+    </style>
 
 </resources>

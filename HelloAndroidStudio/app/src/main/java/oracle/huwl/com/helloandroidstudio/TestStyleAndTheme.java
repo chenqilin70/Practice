@@ -1,9 +1,10 @@
 package oracle.huwl.com.helloandroidstudio;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class TestStyleAndTheme extends AppCompatActivity {
+public class TestStyleAndTheme extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
