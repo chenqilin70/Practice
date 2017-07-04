@@ -131,6 +131,9 @@ public class MainActivity extends AppCompatActivity {
     public void testSimpleAdapter(View v){
         startDefaultActivity(TestSimpleAdapter.class);
     }
+    public void testStyleAndTheme(View v){
+        startDefaultActivity(TestStyleAndTheme.class);
+    }
     public void testBaseAdapter(View v){
         startDefaultActivity(TestBaseAdater.class);
     }

@@ -66,6 +66,11 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="测试Style和Theme！！"
+        android:onClick="testStyleAndTheme"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="测试BaseAdapter"
         android:onClick="testBaseAdapter"/>
 

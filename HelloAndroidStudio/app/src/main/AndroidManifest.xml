@@ -30,7 +30,8 @@
             android:label="@string/title_activity_test_list_view"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".TestSimpleAdapter" />
-        <activity android:name=".TestBaseAdater"></activity>
+        <activity android:name=".TestBaseAdater" />
+        <activity android:name=".TestStyleAndTheme"></activity>
     </application>
 
 </manifest>
