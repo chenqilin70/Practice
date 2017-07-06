@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SpActivity"></activity>
+        <activity android:name=".SpActivity" ></activity>
     </application>
 
 </manifest>
