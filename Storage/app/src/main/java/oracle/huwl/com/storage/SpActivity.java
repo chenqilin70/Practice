@@ -25,5 +25,9 @@ public class SpActivity extends Activity {
         editor.commit();
     }
     public void read(View v){
+        String key=et_key.getText().toString();
+        String value=sp.getString(key,"no value");
+        ToastUtil.showDefaultToast(this,value);
+
     }
 }

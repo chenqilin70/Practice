@@ -17,10 +17,10 @@ public class MainActivity extends Activity {
         startActivity(new Intent(this,SpActivity.class));
     }
     public void testInnerFile(View v){
-
+        startActivity(new Intent(this,IFActivity.class));
     }
     public void testOutterFile(View v){
-
+        startActivity(new Intent(this,OFActivity.class));
     }
     public void testDatabase(View v){
 
