@@ -243,6 +243,5 @@ public class MainActivity extends Activity {
             }
         };
         queue.add(request);
-        queue.start();
     }
 }
