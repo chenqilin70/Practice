@@ -1,0 +1,16 @@
+package com.huwl.oracle.test;
+
+public class TestMain {
+	public static void main(String[] args) {
+		InputStream inputStream=connection.getInputStream();
+        byte[] resultByte=new byte[0];
+        byte[] buffer=new byte[1024];
+        int len=-1;
+        while((len=inputStream.read(buffer))!=-1){
+            resultByte=Arrays.copyOf(resultByte,resultByte.length+len);
+            System.arraycopy(buffer,0,resultByte,resultByte.length,len);
+        }
+        String result=new String(resultByte);
+	}
+
+}

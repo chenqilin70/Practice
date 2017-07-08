@@ -1,0 +1,20 @@
+package com.huwl.oracle.test;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Arrays;
+
+public class TestMain {
+	public static void main(String[] args) {
+		InputStream inputStream=new FileInputStream("1.txt");
+        byte[] resultByte=new byte[0];
+        byte[] buffer=new byte[1024];
+        int len=-1;
+        while((len=inputStream.read(buffer))!=-1){
+            resultByte=Arrays.copyOf(resultByte,resultByte.length+len);
+            System.arraycopy(buffer,0,resultByte,resultByte.length,len);
+        }
+        String result=new String(resultByte);
+	}
+
+}
