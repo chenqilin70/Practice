@@ -1,0 +1,8 @@
+package com.huwl.oracle.bean;
+
+public class Product {
+	private String name;
+	private double price;
+	private String img;
+
+}

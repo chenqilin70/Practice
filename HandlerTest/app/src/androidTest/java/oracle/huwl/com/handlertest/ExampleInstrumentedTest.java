@@ -16,11 +16,15 @@ import static org.junit.Assert.*;
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
-    @Test
+    /*@Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("oracle.huwl.com.handlertest", appContext.getPackageName());
+    }*/
+    @Test
+    public void testJson(){
+        System.out.println("sjdklf");
     }
 }

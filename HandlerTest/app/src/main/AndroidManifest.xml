@@ -3,6 +3,12 @@
     package="oracle.huwl.com.handlertest">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--
+        <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="oracle.huwl.com.handlertest"></instrumentation>
+    -->
 
     <application
         android:allowBackup="true"
@@ -19,7 +25,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".HandlerActivity" />
-        <activity android:name=".HandlerDemo"></activity>
+        <activity android:name=".HandlerDemo" />
+        <activity android:name=".AsyncTastTest" />
+
+        <uses-library android:name="android.test.runner" />
+
+        <activity android:name=".JsonTest"></activity>
     </application>
 
 </manifest>

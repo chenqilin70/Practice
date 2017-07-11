@@ -18,4 +18,10 @@ public class MainActivity extends AppCompatActivity {
     public void handlerDemo(View v){
         startActivity(new Intent(this,HandlerDemo.class));
     }
+    public void asyncTask(View v){
+        startActivity(new Intent(this,AsyncTastTest.class));
+    }
+    public void testJson(View v){
+        startActivity(new Intent(this,JsonTest.class));
+    }
 }

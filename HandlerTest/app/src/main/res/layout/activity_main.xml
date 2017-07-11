@@ -16,9 +16,15 @@
         android:layout_height="wrap_content"
         android:text="Handler Demo"
         android:onClick="handlerDemo"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TestJson"
+        android:onClick="testJson"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test AsyncTask" />
+        android:text="Test AsyncTask"
+        android:onClick="asyncTask"/>
 </LinearLayout>

@@ -22,12 +22,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="自动减少"
-        android:onClick="clickBtn"/>
+        android:onClick="clickBtn"
+        />
 
     <Button
         android:id="@+id/pause"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="暂停"
-        android:onClick="clickBtn"/>
+        android:onClick="clickBtn"
+        android:enabled="false"/>
 </LinearLayout>
