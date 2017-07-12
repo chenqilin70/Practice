@@ -30,6 +30,7 @@ public class ImageLoader {
     }
 
     public void loadImage(String imagePath, ImageView imageView) {
+        imageView.setTag(imagePath);
         Bitmap bitmap=getFromFirstCache(imagePath);
         if(bitmap!=null){
             imageView.setImageBitmap(bitmap);
@@ -41,13 +42,14 @@ public class ImageLoader {
                 imageView.setImageBitmap(bitmap);
                 return;
             }else{
-                bitmap=getFromThirdCache(imagePath,imageView);
+                getFromThirdCache(imagePath,imageView);
             }
 
         }
     }
 
-    private Bitmap getFromThirdCache(final String imagePath, final ImageView imageView) {
+    private void getFromThirdCache(final String imagePath, final ImageView imageView) {
+        final String newTag= (String) imageView.getTag();
         new AsyncTask<Void,Void,Bitmap>(){
             @Override
             protected void onPreExecute() {
@@ -56,6 +58,9 @@ public class ImageLoader {
 
             @Override
             protected Bitmap doInBackground(Void... voids) {
+                if(!imagePath.equals(newTag)){
+                    return null;
+                }
                 Bitmap bitmap=null;
                 HttpURLConnection connection=null;
                 InputStream in=null;
@@ -103,12 +108,14 @@ public class ImageLoader {
                 if(bitmap==null){
                     imageView.setImageResource(R.drawable.error);
                 }else{
-                    imageView.setImageBitmap(bitmap);
+                    if(imagePath.equals(imageView.getTag())){
+                        Log.e("test" , "load a image");
+                        imageView.setImageBitmap(bitmap);
+                    }
                 }
 
             }
         }.execute();
-        return null;
     }
 
     private Bitmap getFromSecondCache(String imagePath) {
