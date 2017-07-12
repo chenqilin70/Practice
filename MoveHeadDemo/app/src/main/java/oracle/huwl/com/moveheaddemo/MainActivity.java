@@ -17,9 +17,13 @@ public class MainActivity extends Activity {
         imageView=findViewById(R.id.imageView);
         imageView.setOnTouchListener(new View.OnTouchListener() {
             private float oldX=0 ,oldY=0;
+            private int maxRight,maxBottm;
             @Override
             public boolean onTouch(View view, MotionEvent event) {
                 if(event.getAction()==0){
+                    View parent= (View) imageView.getParent();
+                    maxBottm=parent.getBottom();
+                    maxRight=parent.getRight();
                     oldX=event.getRawX();
                     oldY=event.getRawY();
                 }else if(event.getAction()==1){
@@ -41,16 +45,14 @@ public class MainActivity extends Activity {
                     if(left<0){
                         right+=-left;
                         left=0;
-
                     }
-                    if(bottom<0){
-                        bottom=0;
-                        top=imageView.getTop();
+                    if(bottom>maxBottm){
+                        top-=(bottom-maxBottm);
+                        bottom=maxBottm;
                     }
-
-                    if(right<0){
-                        right=0;
-                        left=imageView.getLeft();
+                    if(right>maxRight){
+                        left-=(right-maxRight);
+                        right=maxRight;
                     }
                     imageView.layout(left,top,right,bottom);
                     oldX=newX;

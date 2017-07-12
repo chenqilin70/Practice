@@ -13,6 +13,8 @@
 	</section>
 	<section name="NewLocationWizard">
 		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="svn://120.24.244.103/FiveBackstage"/>
+			<item value="svn://120.24.244.103/FiveBackstage/fifth-group"/>
 			<item value="svn://120.24.244.103/SecondSVN"/>
 			<item value="svn://120.24.244.103/Backstage"/>
 		</list>

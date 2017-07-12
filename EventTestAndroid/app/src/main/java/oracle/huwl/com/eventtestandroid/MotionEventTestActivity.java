@@ -18,7 +18,7 @@ public class MotionEventTestActivity extends Activity {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 Log.e("test","MyImageView……setOnTouchListener:"+motionEvent.getAction());
-                return true;
+                return false;
             }
         });
     }
@@ -32,6 +32,6 @@ public class MotionEventTestActivity extends Activity {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.i("test","MotionEventTestActivity……onTouchEvent:"+event.getAction());
-        return super.onTouchEvent(event);
+        return false;
     }
 }

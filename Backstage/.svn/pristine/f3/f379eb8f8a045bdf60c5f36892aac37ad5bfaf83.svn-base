@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/SQL/shoppingmark.sql=UTF-8
+encoding//src/com/mysql/shopping/control/servlet/UserServlet.java=UTF-8
+encoding/<project>=GBK
