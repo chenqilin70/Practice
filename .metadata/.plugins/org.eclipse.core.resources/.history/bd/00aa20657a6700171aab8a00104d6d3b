@@ -1,0 +1,5 @@
+package com.oracle.struts.util;
+
+public class DataUtil {
+
+}

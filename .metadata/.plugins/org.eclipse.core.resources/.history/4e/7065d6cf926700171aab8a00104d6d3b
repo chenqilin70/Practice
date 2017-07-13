@@ -1,0 +1,12 @@
+$(function(){
+	 var myChart = echarts.init(document.getElementById("date_distribution"));
+	 
+	 
+	var data = getVirtulData(2017);
+	myChart.setOption(dateDistriOption.call(data));
+});
+
+
+
+
+

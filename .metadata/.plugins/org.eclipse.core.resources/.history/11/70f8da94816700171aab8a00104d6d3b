@@ -1,0 +1,18 @@
+package com.oracle.struts.util;
+
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import com.mysql.shopping.model.dao.OrderDAO;
+import com.mysql.shopping.model.dao.OrderDAOimp;
+
+public class DataUtil {
+	private static OrderDAO dao=new OrderDAOimp();
+	public static void main(String[] args) throws ParseException {
+		//dao.addStatisticalData();
+		SimpleDateFormat sf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		sf.parse("2017-12-31 12:12:12");
+	}
+
+}

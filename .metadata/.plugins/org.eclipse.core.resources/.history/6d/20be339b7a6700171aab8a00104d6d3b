@@ -1,0 +1,12 @@
+package com.oracle.struts.util;
+
+import com.mysql.shopping.model.dao.OrderDAO;
+import com.mysql.shopping.model.dao.OrderDAOimp;
+
+public class DataUtil {
+	private OrderDAO dao=new OrderDAOimp();
+	public static void main(String[] args) {
+		
+	}
+
+}

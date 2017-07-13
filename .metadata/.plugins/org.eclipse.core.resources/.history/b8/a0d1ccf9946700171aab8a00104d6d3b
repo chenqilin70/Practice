@@ -1,0 +1,11 @@
+select count(*) from orders where month(TIME)='01' && dayofmonth(TIME)='01'
+
+select count(*),month(TIME) from orders group by month(TIME) and dayofmonth(TIME)
+
+
+
+desc orders
+
+select * from product
+
+insert into orderitems

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="Product" namespace="/" extends="struts-default"> 
+		<action name="ProductAction" class="com.oracle.struts.model.action.ProductAction">
+			<result name="addsuccess">/success.jsp</result>
+			<result name="adderror">/error.jsp</result>
+		</action>
+	</package>
+</struts>

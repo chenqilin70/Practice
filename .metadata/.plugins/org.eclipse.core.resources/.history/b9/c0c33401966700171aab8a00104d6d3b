@@ -1,0 +1,28 @@
+package com.oracle.struts.model.action;
+
+import com.mysql.shopping.model.dao.OrderDAO;
+import com.mysql.shopping.model.dao.OrderDAOimp;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class StatisticalActioin extends ActionSupport{
+	private OrderDAO dao=new OrderDAOimp();
+	private String allDateJson;
+	private year;
+	
+	public String getAllDateJson() {
+		return allDateJson;
+	}
+	public void setAllDateJson(String allDateJson) {
+		this.allDateJson = allDateJson;
+	}
+	public String getDateDistribution(){
+		System.out.println("getDateDistribution");
+		String[][] result=dao.getDateArr();
+		return "getDateDistribution";
+	}
+	public String index(){
+		
+		return "index";
+	}
+
+}

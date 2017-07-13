@@ -1,0 +1,16 @@
+package com.oracle.struts.util;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+
+import com.mysql.shopping.model.dao.OrderDAO;
+import com.mysql.shopping.model.dao.OrderDAOimp;
+
+public class DataUtil {
+	private static OrderDAO dao=new OrderDAOimp();
+	public static void main(String[] args) {
+		//dao.addStatisticalData();
+		SimpleDateFormat sf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	}
+
+}

@@ -1,0 +1,6 @@
+select count(*) from orders
+desc orders
+
+select * from product
+
+insert into orderitems

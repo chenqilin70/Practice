@@ -1,0 +1,10 @@
+$(function(){
+	var myChart = echarts.init(document.getElementById("date_distribution"));
+	var data = getDateDistribution()
+	//myChart.setOption(dateDistriOption.call(data));
+});
+
+
+
+
+

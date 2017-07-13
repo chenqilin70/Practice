@@ -12,16 +12,14 @@ import com.mysql.shopping.model.bean.User;
 
 public  class UserDAOimp extends BaseDAOimp implements UserDAO {
 	
-	//´´½¨Ò»¸öÁ¬½Ó£¬Á´½Óµ½Êı¾İ¿â
+	
 	Connection c=getConnection();	
 
 	@Override
-	//ÕâÀï¶¨ÒåµÄÊÇÒÔ¸öuser¶ÔÏó£¬ËùÒÔÔÚUserservletÀïÃæÏÈ·â×°Ò»¸öuser¶ÔÏó
 	public boolean add(Object obj) {
 		User register=(User)obj;
 		PreparedStatement  pre=null;
 		try {
-			//Ìí¼ÓÓÃ»§ĞÅÏ¢£¬prepareStatement½«Êı¾İÌá½»µ½Êı¾İ¿â
 			pre=c.prepareStatement("insert into users(UserID,Username,Password,Realname,Sex,Age,image,status) values(?,?,?,?,?,?,?,?)");
 			pre.setInt(1, register.getUserID());
 			pre.setString(2, register.getUsername());
@@ -31,7 +29,6 @@ public  class UserDAOimp extends BaseDAOimp implements UserDAO {
 			pre.setInt(6, register.getAge());
 			pre.setString(7, register.getImage());
 			pre.setBoolean(8, register.isStatus());
-			//statement ½Ó¿ÚÖĞÓĞexecuteUpdate(String sql)·½·¨·¢ËÍsql ²¢·µ»ØÖ´ĞĞ³É¹¦µÄ¼ÇÂ¼µÄÌõÊı int
 			int n=pre.executeUpdate();
 			return n>0?true:false;	
 			
@@ -75,7 +72,7 @@ public  class UserDAOimp extends BaseDAOimp implements UserDAO {
 			pre.setString(1, user.getUsername());
 			pre.setString(2, user.getPassword());
 			pre.setString(3, user.getRealname());
-			pre.setInt(4, user.getSex()=="ÄĞ"?0:1);
+			pre.setInt(4, user.getSex()=="ç”·"?0:1);
 			pre.setInt(5, user.getAge());
 			pre.setString(6, user.getImage());
 			pre.setInt(7, user.getUserID());
@@ -95,13 +92,12 @@ public  class UserDAOimp extends BaseDAOimp implements UserDAO {
 	public User login(String username, String password) {
 		User user=null;
 		PreparedStatement pre=null;
-		ResultSet  rs=null;//ÊÇÊı¾İÖĞ²éÑ¯½á¹û·µ»ØµÄÒ»ÖÖ¶ÔÏó£¬¿ÉÒÔËµ½á¹û¼¯ÊÇÒ»¸ö´æ´¢²éÑ¯½á¹ûµÄ¶ÔÏó£¬
-		//µ«ÊÇ½á¹û¼¯²¢²»½ö½ö¾ßÓĞ´æ´¢µÄ¹¦ÄÜ£¬ËûÍ¬Ê±»¹¾ßÓĞ²Ù×İÊı¾İµÄ¹¦ÄÜ£¬¿ÉÄÜÍê³É¶ÔÊı¾İµÄ¸üĞÂµÈ
+		ResultSet  rs=null;
 		try {
 			pre=c.prepareStatement("select * from users where username=? and password=?");
 			pre.setString(1, username);
 			pre.setString(2, password);
-			rs=pre.executeQuery();//ÅĞ¶Ï²éÑ¯ÊÇ·ñÓĞ·µ»ØÖµ
+			rs=pre.executeQuery();
 			if(rs.next()){
 				user=new User();
 				user.setUserID(rs.getInt("UserID"));
@@ -127,9 +123,8 @@ public  class UserDAOimp extends BaseDAOimp implements UserDAO {
 		ResultSet  rs=null;
 		try {
 			pre=c.prepareStatement("select * from users where userID=?");
-			//½«×Ö·ûÀàĞÍ×ª»»³ÉÊıÖµĞÍ
 			pre.setString(1, userID);
-			rs=pre.executeQuery();//ÅĞ¶Ï²éÑ¯ÊÇ·ñÓĞ·µ»ØÖµ
+			rs=pre.executeQuery();
 			if(rs.next()){
 				user=new User();
 				user.setUserID(rs.getInt("UserID"));
