@@ -1,0 +1,30 @@
+package com.mysql.shopping.model.dao;
+
+public class AddressDAOImp extends BaseDAOimp implements AddressDAO {
+
+
+	@Override
+	public boolean add(Object obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(Object obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean update(Object obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

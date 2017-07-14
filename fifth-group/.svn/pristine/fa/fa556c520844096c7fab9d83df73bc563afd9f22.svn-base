@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="Product" namespace="/" extends="struts-default"> 
+		<action name="addProductAction" class="com.oracle.struts.model.action.ProductAction" method="addproduct">
+			<result name="addsuccess">/goodcontrol.jsp</result>
+			<result name="adderror">/error.jsp</result>
+		</action>
+		
+		<action name="selectProductAction" class="com.oracle.struts.model.action.ProductAction" method="selectproduct">
+			<result name="selectsuccess">/goodcontrol.jsp</result>	
+			<result name="selecterror">/error.jsp</result>	
+		</action>
+		
+		<action name="GetProductAction" class="com.oracle.struts.model.action.ProductAction" method="getproduct">
+			<result name="getsuccess">/updateproduct.jsp</result>	
+			<result name="geterror">/error.jsp</result>	
+		</action>
+		
+		<action name="updateProductAction" class="com.oracle.struts.model.action.ProductAction" method="updateproduct">
+			<result name="updatesuccess">/goodcontrol.jsp</result>	
+			<result name="updateerror">/error.jsp</result>		
+		</action>
+		
+		<action name="deleteProductAction" class="com.oracle.struts.model.action.ProductAction" method="deleteproduct">
+			<result name="deletesuccess">/goodcontrol.jsp</result>	
+			<result name="deleteerror">/error.jsp</result>		
+		</action>
+	</package>
+</struts>

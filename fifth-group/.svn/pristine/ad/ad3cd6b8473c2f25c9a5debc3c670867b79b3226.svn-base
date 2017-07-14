@@ -1,0 +1,80 @@
+package admin.com.oracle.model.bean;
+
+public class productPage {
+	
+	private int counts;
+	private int nowpage;
+	private int lastpage;
+	private int nextpage;
+	public int getCounts() {
+		return counts;
+	}
+	public void setCounts(int counts) {
+		this.counts = counts;
+	}
+	public int getNowpage() {
+		return nowpage;
+	}
+	public void setNowpage(int nowpage) {
+		this.nowpage = nowpage;
+	}
+	public int getLastpage() {
+		return lastpage;
+	}
+	public void setLastpage(int lastpage) {
+		this.lastpage = lastpage;
+	}
+	public int getNextpage() {
+		return nextpage;
+	}
+	public void setNextpage(int nextpage) {
+		this.nextpage = nextpage;
+	}
+	public productPage(int counts, int nowpage, int lastpage, int nextpage) {
+		super();
+		this.counts = counts;
+		this.nowpage = nowpage;
+		this.lastpage = lastpage;
+		this.nextpage = nextpage;
+	}
+	public productPage() {
+		super();
+	}
+	@Override
+	public String toString() {
+		return "productPage [counts=" + counts + ", nowpage=" + nowpage + ", lastpage=" + lastpage + ", nextpage="
+				+ nextpage + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + counts;
+		result = prime * result + lastpage;
+		result = prime * result + nextpage;
+		result = prime * result + nowpage;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		productPage other = (productPage) obj;
+		if (counts != other.counts)
+			return false;
+		if (lastpage != other.lastpage)
+			return false;
+		if (nextpage != other.nextpage)
+			return false;
+		if (nowpage != other.nowpage)
+			return false;
+		return true;
+	}
+	
+	
+
+}

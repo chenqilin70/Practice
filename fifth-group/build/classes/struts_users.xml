@@ -4,10 +4,21 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
-
-	<package name="usermanage" namespace="/" extends="struts-default">
+	<package name="usermanage" namespace="/" extends="struts-default" >
+		<interceptors>
+			<interceptor name="quanxian" class="com.oracle.struts.model.action.LimitAction">
+			</interceptor>
+		</interceptors>
+		<global-results >
+			<result name="nolimit">nolimit.jsp</result>
+		</global-results>
 		<action name="UserAction" class="com.oracle.struts.model.action.UserAction">
-		
+			<result name="addsuccess">index.jsp</result>
+			<result name="adderror">error.jsp</result>
+			<result name="identitylist">adduser.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="quanxian"></interceptor-ref>
 		</action>
+		
 	</package>
 </struts>

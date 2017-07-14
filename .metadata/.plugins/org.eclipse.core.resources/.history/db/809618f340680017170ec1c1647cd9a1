@@ -1,0 +1,4 @@
+select * from users
+
+delete from users where USERID>9 || USERID<0
+desc users

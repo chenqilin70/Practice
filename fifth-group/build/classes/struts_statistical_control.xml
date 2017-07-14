@@ -13,6 +13,9 @@
 			<result name="getDateDistribution" type="json">
 			    <param name="root">result</param>
 			</result>
+			<result name="getAddrData" type="json">
+			    <param name="root">result</param>
+			</result>
 			<result name="index">/statisticalcontrol.jsp</result>
 		</action>
 	

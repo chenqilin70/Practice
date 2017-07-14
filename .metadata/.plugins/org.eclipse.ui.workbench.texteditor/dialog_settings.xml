@@ -2,22 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="System" key="selection"/>
+		<item value="app" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="System"/>
-			<item value="headerFile"/>
-			<item value="requestFocus"/>
-			<item value="android:layout_width=&quot;wrap_content&quot;"/>
-			<item value="default"/>
-			<item value="android.intent.action.SEND"/>
-			<item value="ComposeMessageActivity"/>
-			<item value="sms"/>
+			<item value="app"/>
+			<item value="myChart"/>
+			<item value="showLoading"/>
+			<item value="uploadedDataURL"/>
+			<item value="258EF4"/>
+			<item value="textStyle"/>
+			<item value="404A59"/>
+			<item value="Text"/>
 		</list>
 		<list key="replacehistory">
+			<item value="25edf4"/>
+			<item value="this"/>
+			<item value="ps"/>
+			<item value="成交量"/>
+			<item value="2017"/>
 			<item value="android:layout_width=&quot;fill_parent&quot;"/>
 			<item value="android:layout_width=&quot;wrap_content&quot;"/>
 		</list>
@@ -26,7 +31,7 @@
 		<item value="273" key="DIALOG_WIDTH"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 		<item value="400" key="DIALOG_HEIGHT"/>
-		<item value="1517" key="DIALOG_X_ORIGIN"/>
-		<item value="341" key="DIALOG_Y_ORIGIN"/>
+		<item value="1519" key="DIALOG_X_ORIGIN"/>
+		<item value="203" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

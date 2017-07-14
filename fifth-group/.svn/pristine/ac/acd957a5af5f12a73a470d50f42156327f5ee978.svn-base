@@ -1,0 +1,46 @@
+package com.oracle.struts.model.action;
+
+import java.util.Set;
+
+import com.mysql.shopping.model.dao.BackstageUserDAOImp;
+import com.opensymphony.xwork2.ActionSupport;
+
+import admin.com.oracle.model.bean.BackstageUser;
+
+public class UserAction extends ActionSupport {
+	private BackstageUser user;
+	private Set<String> identitylist;
+	
+
+	public Set<String> getIdentitylist() {
+		return identitylist;
+	}
+
+	public void setIdentitylist(Set<String> identitylist) {
+		this.identitylist = identitylist;
+	}
+
+	public BackstageUser getUser() {
+		return user;
+	}
+
+	public void setUser(BackstageUser user) {
+		this.user = user;
+	}
+	public String listidentity(){
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		identitylist=b.listidentity();
+		return "identitylist";
+	}
+	
+	public String adduser(){
+		System.out.println(user);
+		user.setID("0");
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		if(b.add(user)){
+			return "addsuccess";
+		}else{
+			return "adderror";
+		}
+	}
+}

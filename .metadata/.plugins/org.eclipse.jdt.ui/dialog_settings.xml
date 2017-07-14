@@ -104,19 +104,19 @@
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
 		<section name="DialogBoundsSettings">
-			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1120" key="DIALOG_WIDTH"/>
 			<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 			<item value="500" key="DIALOG_HEIGHT"/>
-			<item value="668" key="DIALOG_X_ORIGIN"/>
-			<item value="195" key="DIALOG_Y_ORIGIN"/>
+			<item value="681" key="DIALOG_X_ORIGIN"/>
+			<item value="290" key="DIALOG_Y_ORIGIN"/>
 		</section>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item value="587" key="DIALOG_WIDTH"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 		<item value="767" key="DIALOG_HEIGHT"/>
-		<item value="675" key="DIALOG_X_ORIGIN"/>
-		<item value="17" key="DIALOG_Y_ORIGIN"/>
+		<item value="959" key="DIALOG_X_ORIGIN"/>
+		<item value="75" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
 		<item value="516" key="DIALOG_WIDTH"/>
@@ -124,6 +124,13 @@
 		<item value="759" key="DIALOG_HEIGHT"/>
 		<item value="710" key="DIALOG_X_ORIGIN"/>
 		<item value="22" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="DialogBounds_AddDelegateMethodsDialog">
+		<item value="608" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="615" key="DIALOG_HEIGHT"/>
+		<item value="664" key="DIALOG_X_ORIGIN"/>
+		<item value="118" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="SourceActionDialog.methods">
 		<item value="true" key="IgnoreDefault"/>

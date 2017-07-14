@@ -1,0 +1,91 @@
+package com.oracle.struts.model.action;
+
+import java.util.List;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.mysql.shopping.model.dao.NoticeDAOimp;
+import com.opensymphony.xwork2.ActionSupport;
+
+import admin.com.oracle.model.bean.Notice;
+
+public class NoticeAction extends ActionSupport {
+	private Notice n;
+	private NoticeDAOimp dao;
+	private List<Notice> notices;
+	private int id;
+	
+	
+	
+	
+	
+
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public List<Notice> getNotices() {
+		return notices;
+	}
+
+	public void setNotices(List<Notice> notices) {
+		this.notices = notices;
+	}
+
+	public Notice getN() {
+		return n;
+	}
+
+	public void setN(Notice n) {
+		this.n = n;
+	}
+
+
+
+	public NoticeAction() {
+		dao=new NoticeDAOimp();
+	}
+
+	public String addNotice(){
+		System.out.println("inter addNotice");
+		System.out.println(n);
+		boolean re=dao.add(n);
+		notices=dao.loadAllnotice(1, 20);
+		System.out.println(notices);
+		return re==true?"addSuccess":"addFail";
+
+	}
+	
+	public String loadAllnotice(){
+		System.out.println("inter loadAllnotice");
+		notices=dao.loadAllnotice(1, 20);
+		System.out.println(notices);
+		ServletActionContext.getRequest().setAttribute("n", notices);
+		return notices!=null?"selectAllsuccess":"selectAllfail";
+
+	}
+	
+	public String updateNotice(){
+		System.out.println("inter updateNotice");
+		
+		return null;
+	}
+	
+	public String searchNoticeById(){
+		System.out.println(id);
+		n=dao.searchNoticeById(id);
+		System.out.println(n);
+		
+		return "searchidSuccess";
+	}
+	
+	
+	
+	
+
+}

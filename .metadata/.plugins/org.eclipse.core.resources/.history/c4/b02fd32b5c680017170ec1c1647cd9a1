@@ -1,0 +1,10 @@
+select count(*) from users limit 200
+select * from users  order by USERID  limit 100
+
+delete from address where ADDRESSID=6
+desc users
+desc orders
+desc address
+select * from address
+
+insert into address values(null,"","c","a","s","de","t","",43)

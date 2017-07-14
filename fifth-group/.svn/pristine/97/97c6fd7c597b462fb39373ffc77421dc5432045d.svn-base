@@ -1,0 +1,129 @@
+package com.oracle.struts.model.action;
+
+import java.util.List;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.mysql.shopping.model.bean.Goods;
+import com.mysql.shopping.model.dao.GoodsDAO;
+import com.mysql.shopping.model.dao.GoodsDAOimp;
+import com.opensymphony.xwork2.ActionSupport;
+
+import admin.com.oracle.model.bean.Product;
+import admin.com.oracle.model.bean.productPage;
+
+@SuppressWarnings("serial")
+public class ProductAction extends ActionSupport {
+	
+	private int page;
+	private int value;
+	public int getPage() {
+		return page;
+	}
+	public void setPage(int page) {
+		this.page = page;
+	}
+	public int getValue() {
+		return value;
+	}
+	public void setValue(int value) {
+		this.value = value;
+	}
+	private Product p;
+	private String productid;
+	List<Goods> ps;
+	private GoodsDAO  dao;
+	
+	public String getProductid() {
+		return productid;
+	}
+	public void setProductid(String productid) {
+		this.productid = productid;
+	}
+	public List<Goods> getPs() {
+		return ps;
+	}
+	public void setPs(List<Goods> ps) {
+		this.ps = ps;
+	}
+	public Product getP() {
+		return p;
+	}
+	public void setP(Product p) {
+		this.p = p;
+	}
+	public GoodsDAO getDao() {
+		return dao;
+	}
+	public void setDao(GoodsDAO dao) {
+		this.dao = dao;
+	}
+	public ProductAction(){
+		dao=new GoodsDAOimp();
+	}
+	public String addproduct()
+	{
+		boolean result=	dao.addProduct(p);
+		return result?"addsuccess":"adderror";
+	}
+	
+	/**
+	 * 这是商品管理查询商品信息的方法
+	 * */
+	public String selectproduct(){
+		System.out.println(page);
+		System.out.println(value);
+		int counts=dao.getAllProduct();
+		int nowpage=page;
+		int lastpage=(nowpage==1)?1:(nowpage-1);
+		int nextpage=(nowpage==((counts%value==0)?(counts%value):(counts%value+1))?((counts%value==0)?(counts%value):(counts%value+1)):(nowpage+1));
+		System.out.println(lastpage);
+		System.out.println(nextpage);
+		ps=dao.listAllProduct(page, 10);
+		productPage pg=new productPage(counts,nowpage,lastpage,nextpage);
+		ServletActionContext.getRequest().setAttribute("pg", pg);
+		ServletActionContext.getRequest().setAttribute("ps", ps);
+		System.out.println(ps);
+		if(ps!=null)
+		{
+			return "selectsuccess";
+		}else
+		{
+			return "selecterror";
+		}
+	}
+	/**
+	 * 这是商品管理获取单一商品信息的方法
+	 * */
+	public String getproduct(){
+		Goods update=dao.updateProduct(productid);
+		ServletActionContext.getRequest().setAttribute("update", update);
+		System.out.println(update);
+		if(update!=null)
+		{
+			return "getsuccess";
+		}else
+		{
+			return "geterror";
+		}
+	}
+	/**
+	 * 这是商品管理更改商品信息的方法
+	 * */
+	public String updateproduct(){
+		System.out.println("修改后为："+p);
+		boolean updateresult=dao.updateproduct(p);
+		return updateresult?"updatesuccess":"updateerror";
+	}
+	/**
+	 * 这是商品管理删除商品信息的方法
+	 * */
+	public String delete(){
+		System.out.println("马上删除");
+		System.out.println("删除的是："+p);
+		boolean deleteproduct=dao.deleteproduct(productid);
+		return deleteproduct?"deletesuccess":"deleteerror";
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	<constant name="struts.devMode" value="true"/>
+	<package name="struts_statistical_control" namespace="/" extends="struts-default">
+		<result-types>
+		    <result-type name="json" class="org.apache.struts2.json.JSONResult"></result-type>
+		</result-types>
+		<action name="statistical" class="com.oracle.struts.model.action.StatisticalActioin">
+			<result name="getDateDistribution" type="json">
+			    <param name="root">result</param>
+			</result>
+			<result name="getAddrData"></result>
+			<result name="index">/statisticalcontrol.jsp</result>
+		</action>
+	
+	</package>
+</struts>

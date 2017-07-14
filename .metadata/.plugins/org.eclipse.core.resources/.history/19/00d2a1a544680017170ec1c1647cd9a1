@@ -1,0 +1,9 @@
+select * from users limit 200
+
+delete from users where USERID>9 || USERID<0
+desc users
+desc orders
+desc address
+select * from address
+
+insert into address values(null,"p","c","a","s","de","t","",43)
