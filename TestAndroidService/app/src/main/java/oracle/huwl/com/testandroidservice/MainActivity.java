@@ -18,21 +18,19 @@ public class MainActivity extends Activity {
         super.onDestroy();
 //        if(connection!=null){
 //            unbindService(connection);
-//        }
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
     public void startService(View v){
-        Intent intent=new Intent(this,MyService.class);
+        Intent intent=new Intent(this,MyRemoteService.class);
         startService(intent);
         Toast.makeText(this,"service is running",Toast.LENGTH_SHORT).show();
     }
     public void stopService(View v){
-        stopService(new Intent(this,MyService.class));
+        stopService(new Intent(this,MyRemoteService.class));
         Toast.makeText(this,"service is shutdown",Toast.LENGTH_SHORT).show();
     }
     private ServiceConnection connection;
@@ -48,7 +46,7 @@ public class MainActivity extends Activity {
                     Log.e("test","onServiceDisconnected-->");
                 }
             };
-            bindService(new Intent(this,MyService.class)
+            bindService(new Intent(this,MyRemoteService.class)
                     ,connection, Context.BIND_AUTO_CREATE);
         }else{
             Toast.makeText(this,"已经绑定",Toast.LENGTH_SHORT).show();

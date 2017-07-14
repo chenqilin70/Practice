@@ -7,10 +7,11 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="bind remote Service" />
+        android:text="bind remote Service"
+        android:onClick="bindRemoteService"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/et_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -20,10 +21,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="调用远程服务的方法" />
+        android:text="调用远程服务的方法"
+        android:onClick="callRemoteFun"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="unbind remote Service" />
+        android:text="unbind remote Service"
+        android:onClick="unbindRemoteService"/>
 </LinearLayout>

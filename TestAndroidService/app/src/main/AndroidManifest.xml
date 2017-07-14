@@ -16,6 +16,11 @@
             </intent-filter>
         </activity>
         <service android:name=".MyService"></service>
+        <service android:name="oracle.huwl.com.testandroidservice.MyRemoteService">
+            <intent-filter>
+                <action android:name="oracle.huwl.com.testandroidservice.MyRemoteService"></action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
