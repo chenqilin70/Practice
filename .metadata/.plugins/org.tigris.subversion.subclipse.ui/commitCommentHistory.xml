@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CommitComments>	<CommitComment>&quot;公司成交量图标&quot;</CommitComment>
+<CommitComments>	<CommitComment>&quot;公司用户地理分布图&quot;</CommitComment>
+	<CommitComment>&quot;公司成交量图标&quot;</CommitComment>
 	<CommitComment>&quot;&quot;</CommitComment>
 	<CommitComment>添加测试数据</CommitComment>
 	<CommitComment>统计测试数据的添加</CommitComment>

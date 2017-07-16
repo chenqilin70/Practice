@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item value="false" key="isRegEx"/>
-		<item value="app" key="selection"/>
+		<item value="true" key="isRegEx"/>
+		<item value="订单量" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="app"/>
-			<item value="myChart"/>
-			<item value="showLoading"/>
-			<item value="uploadedDataURL"/>
-			<item value="258EF4"/>
-			<item value="textStyle"/>
-			<item value="404A59"/>
-			<item value="Text"/>
+			<item value="pm2.5"/>
+			<item value="pm"/>
+			<item value="&quot;"/>
+			<item value="男"/>
+			<item value="重庆"/>
+			<item value="杭州"/>
+			<item value="北京"/>
+			<item value="深圳"/>
 		</list>
 		<list key="replacehistory">
-			<item value="25edf4"/>
+			<item value="订单量"/>
+			<item value="&apos;"/>
 			<item value="this"/>
+			<item value=""/>
+			<item value="25edf4"/>
 			<item value="ps"/>
 			<item value="成交量"/>
 			<item value="2017"/>
-			<item value="android:layout_width=&quot;fill_parent&quot;"/>
-			<item value="android:layout_width=&quot;wrap_content&quot;"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="273" key="DIALOG_WIDTH"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 		<item value="400" key="DIALOG_HEIGHT"/>
-		<item value="1519" key="DIALOG_X_ORIGIN"/>
-		<item value="203" key="DIALOG_Y_ORIGIN"/>
+		<item value="1537" key="DIALOG_X_ORIGIN"/>
+		<item value="446" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
