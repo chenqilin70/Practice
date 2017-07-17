@@ -38,7 +38,7 @@ public class PersonProvider extends ContentProvider{
         SQLiteDatabase database=dbHelper.getReadableDatabase();
         int code=matcher.match(uri);
         Cursor cursor=null;
-        if(code==-1){
+        if(code==1){
             cursor=database.query("person",projection,selection,selectionArgs,sortOrder,null,null);
         }else if (code==2){
             long id=ContentUris.parseId(uri);
@@ -61,18 +61,58 @@ public class PersonProvider extends ContentProvider{
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues contentValues) {
         Log.e("test","PersonProvider()  insert……");
-        return null;
+        SQLiteDatabase database=dbHelper.getReadableDatabase();
+        int code = matcher.match(uri);
+        if(code==1){
+            long id=database.insert("person",null,contentValues);
+            uri=ContentUris.withAppendedId(uri,id);
+            database.close();
+            return uri;
+        }else{
+            database.close();
+            throw new RuntimeException("插入的uri不合法");
+        }
     }
 
     @Override
-    public int delete(@NonNull Uri uri, @Nullable String s, @Nullable String[] strings) {
+    public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
         Log.e("test","PersonProvider()  delete……");
-        return 0;
+        SQLiteDatabase database=dbHelper.getReadableDatabase();
+        int code = matcher.match(uri);
+        if(code==1){
+            int count=database.delete("person",selection,selectionArgs);
+            database.close();
+            return count;
+
+        }else if(code==2){
+            long id= ContentUris.parseId(uri);
+            int count=database.delete("person","_id=?",new String[]{id+""});
+            database.close();
+            return count;
+        }else{
+            database.close();
+            throw new RuntimeException("插入的uri不合法");
+        }
     }
 
     @Override
-    public int update(@NonNull Uri uri, @Nullable ContentValues contentValues, @Nullable String s, @Nullable String[] strings) {
+    public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
         Log.e("test","PersonProvider()  update……");
-        return 0;
+        SQLiteDatabase database=dbHelper.getReadableDatabase();
+        int code = matcher.match(uri);
+        if(code==1){
+            int count=database.update("person",values,selection,selectionArgs);
+            database.close();
+            return count;
+
+        }else if(code==2){
+            long id= ContentUris.parseId(uri);
+            int count=database.update("person",values,"_id=?",new String[]{id+""});
+            database.close();
+            return count;
+        }else{
+            database.close();
+            throw new RuntimeException("更新的uri不合法");
+        }
     }
 }
