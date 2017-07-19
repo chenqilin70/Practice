@@ -18,6 +18,18 @@
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
@@ -30,6 +42,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\WorkFile\GitRepository\Practice\TestGenrator"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -41,12 +54,14 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.huwl.oracle.wechat.catcher.test_maven_generator"/>
 			<item value="com.huwl.oracle.wechat.catcher.user_catcher"/>
 		</list>
 		<list key="groupId">
 			<item value="com.huwl.oracle.wechat.catcher"/>
 		</list>
 		<list key="artifactId">
+			<item value="test_maven_generator"/>
 			<item value="user_catcher"/>
 		</list>
 		<list key="projectNameTemplate">

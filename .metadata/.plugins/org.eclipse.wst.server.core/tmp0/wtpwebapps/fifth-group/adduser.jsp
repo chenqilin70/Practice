@@ -37,6 +37,11 @@
 		<div class="items">
        		<form action="UserAction!adduser.action" method="post" enctype="multipart/form-data">
         	<div id="main">
+        	
+        	<s:if test="identitylist==null">
+					<s:action name="UserAction!listidentity" id="identitylist" namespace="/" ></s:action>
+			</s:if>
+					
         	<table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
 	         	<tr>
 	           		<th width="131">名称</th>
@@ -61,9 +66,6 @@
 				<tr>
 					<td align="right">用户职位</td>
 					<td>
-					<s:if test="identitylist==null">
-					<s:action name="UserAction!listidentity" id="identitylist" namespace="/" ></s:action>
-					</s:if>
 					<select name="user.position">
 					<s:iterator id="id" value="#identitylist.identitylist" >
 						<option value="<s:property value="#id.position" />"><s:property value="#id.position" /></option>

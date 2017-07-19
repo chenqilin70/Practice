@@ -24,20 +24,8 @@
 
      frm.elements['new_cat_id'].style.display = frm.elements['action'].value == 'category_move' ? '' : 'none';
  }
- 
- function xuanze() {
-     var my=document.getElementById("xuanze");
-     var x=document.getElementsByName("xuan");
-     for(var s in x){
-         x[s].checked=my.checked;
-     }
- }
- 
- function dele() {
-	    var my=document.getElementById("xuanze");
-	    my.checked=false;
-	}
- </script>
+
+</script>
 </head>
 <body>
 <div id="dcWrap">
@@ -46,32 +34,9 @@
 	<div id="urHere">杰仔专卖网<b>></b><strong>用户管理</strong> </div>   
 		<div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
 		<h3><a href="adduser.jsp" class="actionBtn add">添加用户</a>用户管理</h3>
-			<table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
-    			<tr align="center" style="font-size: 20px;">
-    				<td colspan="9">当前用户</td>
-    			</tr>
-     			<tr>
-			    	<th width="30" align="center">编号</th>
-			      	<th align="center">用户名</th>
-			      	<th align="center">真实姓名</th>
-			      	<th align="center">身份</th>
-			      	<th align="center">权限</th>
-			      	<th align="center">E-mail地址</th>
-			      	<th align="center">性别</th>
-			      	<th align="center">年龄</th>
-			      	<th align="center"><input onclick="xuanze()" id="xuanze" type="checkbox" style="font-size: 12px;"/>|操作</th>
-     			</tr>
-          		<tr>
-          			<td></td>
-          			<td></td>
-          			<td></td>
-          			<td></td>
-          			<td></td>
-          			<td></td>
-          			<td></td>
-          			<td></td>
-					<td align="center"><input style="margin-left: 10px;" type="checkbox" onclick="dele()"  name="xuan" /> | <a href="">编辑</a> | <a href="">删除</a></td>     			</tr>
-         	</table>
+		
+		<s:action name="UserAction!listcontroluser" namespace="/" executeResult="true"></s:action>
+			
 
 
 </div>

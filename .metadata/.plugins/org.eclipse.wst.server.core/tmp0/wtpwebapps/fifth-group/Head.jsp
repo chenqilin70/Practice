@@ -1,5 +1,6 @@
 <%@page language="java"  pageEncoding="utf-8"%>
 <%@page language="java" contentType="text/html; charset=utf-8"%>
+<%@taglib prefix="s"   uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -64,7 +65,31 @@
   		<li><a href="shujubfnoticecontrol.jsp"><i class="backup"></i><em>数据备份</em></a></li>
   		<li><a href="manager.jsp"><i class="manager"></i><em>网站管理员</em></a></li>
  	</ul>
-</div></div>
+</div>
+<div  style="position:fixed;  height:250px;width:170px ;  background-image: url('images/notice.jpg');">
+<br/><br/><br/><br/><div align="center"  style="font-family: '方正舒体';font-size: 25px; color: blue" >公告</div>
+<s:action name="NoticeAction!selectRoughNotice"  namespace="/">
+</s:action>
+
+<ul>
+<s:iterator value="#attr.n1">
+	<li><s:a href="noticecontrol.jsp"><s:property value="notice"/></s:a></li>
+	<div align="right"><s:property value="date"/></div>
+	</s:iterator>
+	<s:else>
+	<li></li>
+	</s:else>
+</ul>
+
+
+
+
+
+</div>
+
+</div>
+
+
 <!-- 左侧导航栏结束 -->
 </body>
 </html>

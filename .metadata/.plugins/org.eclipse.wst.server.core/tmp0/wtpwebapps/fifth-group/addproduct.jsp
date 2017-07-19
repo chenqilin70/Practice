@@ -13,12 +13,9 @@
 <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
 <script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript">
-
     //实例化编辑器
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
     var ue = UE.getEditor('editor');
-
-
     function isFocus(e){
         alert(UE.getEditor('editor').isFocus());
         UE.dom.domUtils.preventDefault(e)
@@ -62,12 +59,10 @@
         UE.getEditor('editor').setDisabled('fullscreen');
         disableBtn("enable");
     }
-
     function setEnabled() {
         UE.getEditor('editor').setEnabled();
         enableBtn();
     }
-
     function getText() {
         //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
         var range = UE.getEditor('editor').selection.getRange();
@@ -75,7 +70,6 @@
         var txt = UE.getEditor('editor').selection.getText();
         alert(txt)
     }
-
     function getContentTxt() {
         var arr = [];
         arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
@@ -115,11 +109,9 @@
             UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
         }
     }
-
     function getLocalData () {
         alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
     }
-
     function clearLocalData () {
         UE.getEditor('editor').execCommand( "clearlocaldata" );
         alert("已清空草稿箱")
@@ -133,17 +125,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 <div id="dcWrap">
 <%@include file="Head.jsp" %>
 <div id="dcMain">
-<div>
-    <h1>完整demo</h1>
-    <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
-</div>
-<div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-	<h3>添加分类</h3>
-    <form action="addProductAction!addproduct" method="post">
+<div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong> </div>   
+<div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <form action="addProductAction!addproduct" method="post" style="width: 1200px;margin-top:-10px;">
     	<table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       		<tr>
       			<td width="80" align="right">商品名称</td>
@@ -174,7 +161,7 @@
       <tr>
        <td align="right">商品描述</td>
        <td>
-        <textarea name="p.description" cols="60" rows="4" class="textArea"></textarea>
+   	 	<script id="editor" type="text/plain" style="width:500px;height:210px;" name="p.description"></script>
        </td>
       </tr>
       <tr>

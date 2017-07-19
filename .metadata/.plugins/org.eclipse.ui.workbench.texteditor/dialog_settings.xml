@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="isRegEx"/>
-		<item value="订单量" key="selection"/>
+		<item value="./src/main/java" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="\./src"/>
 			<item value="pm2.5"/>
 			<item value="pm"/>
 			<item value="&quot;"/>
@@ -15,9 +16,9 @@
 			<item value="重庆"/>
 			<item value="杭州"/>
 			<item value="北京"/>
-			<item value="深圳"/>
 		</list>
 		<list key="replacehistory">
+			<item value="\./src/main/java"/>
 			<item value="订单量"/>
 			<item value="&apos;"/>
 			<item value="this"/>
@@ -25,7 +26,6 @@
 			<item value="25edf4"/>
 			<item value="ps"/>
 			<item value="成交量"/>
-			<item value="2017"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

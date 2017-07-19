@@ -45,16 +45,21 @@ $(function(){
         <a href="outputexcelAction!outputdata">导出数据</a>
     	<table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
     		<tr>
-		        <th width="40" align="center">编号</th>
+    			<th colspan="10"></th>
+    			<th colspan="1">导出|删除</th>
+    		</tr>
+    		<tr>
+		        <th width="30" align="center">编号</th>
 		        <th width="80" align="center">名称</th>
-		        <th width="80" align="center">品牌</th>
-		       	<th width="80" align="center">系列</th>
-		        <th width="80" align="center">类型</th>
+		        <th width="60" align="center">品牌</th>
+		       	<th width="60" align="center">系列</th>
+		        <th width="60" align="center">类型</th>
 		        <th width="80" align="center">描述</th>
 		        <th width="80" align="center">价格</th>
-		        <th width="80" align="center">类型ID</th>
+		        <th width="40" align="center">类型ID</th>
 		        <th width="80" align="center">图片</th>
 		        <th width="80" align="center">操作</th>
+		        <th width="80" align="center"><input type=checkbox name=list onClick="this.value=check(this.form.list)">全选/<input type=checkbox name=list>反选</th>
      		</tr>
     		<s:iterator value="#attr.ps" status="stuts">
     			<s:if test="#stuts.odd == true">
@@ -68,11 +73,12 @@ $(function(){
 			        <td align="center"><s:property value="basicprice" /></td>
 			        <td align="center"><s:property value="typeid" /></td>
 			        <td align="center"><img src="<s:property value="image" />"></td>
-			        <td align="center"><a href="updateproduct.jsp?productid=${productid}" style="color:red">编辑</a> | <a href="" class="deleteProduct" productid='${productid}' style="color:red">删除</a></td>
+			        <td align="center"><a href="updateproduct.jsp?productid=${productid}" style="color:green">编辑</a></td>
+		    		<td align="center"><a href="" class="deleteProduct" productid='${productid}' style="color:red">删除</a><input type=checkbox name=list></td>
 		    	</tr>
 		     </s:if>
              <s:else>
-             	<tr style="background-color:buttonshadow;">
+             	<tr style="background-color:graytext;">
 			        <td align="center"><s:property value="productid" /></td>
 			        <td align="center"><s:property value="name" /></td>
 			        <td align="center"><s:property value="brand" /></td>
@@ -82,13 +88,14 @@ $(function(){
 			        <td align="center"><s:property value="basicprice" /></td>
 			        <td align="center"><s:property value="typeid" /></td>
 			        <td align="center"><img src="<s:property value="image" />"></td>
-			        <td align="center"><a href="updateproduct.jsp?productid=${productid}" style="color:red">编辑</a> | <a href="" class="deleteProduct" productid='${productid}' style="color:red">删除</a></td>
+			        <td align="center"><a href="updateproduct.jsp?productid=${productid}" style="color:green">编辑</a></td>
+		    		<td align="center"><a href="" class="deleteProduct" productid='${productid}' style="color:red">删除</a><input type=checkbox name=list></td>
 		    	</tr>
              </s:else>
 		</s:iterator >
 		<s:iterator value="#attr.pg">
 			<tr>
-				<td colspan="2" align="center"><a href="selectProductAction!selectproduct?pg.page=<s:property value='firstpage'/>&pg.value=10" >首     页</a></td>
+				<td colspan="3" align="center"><a href="selectProductAction!selectproduct?pg.page=<s:property value='firstpage'/>&pg.value=10" >首     页</a></td>
 				<td colspan="3" align="center"><a href="selectProductAction!selectproduct?pg.page=<s:property value='prexpage' />&pg.value=10" >上一页</a></td>
 				<td colspan="3" align="center"><a href="selectProductAction!selectproduct?pg.page=<s:property value='nextpage' />&pg.value=10" >下一页</a></td>
 				<td colspan="2" align="center"><a href="selectProductAction!selectproduct?pg.page=<s:property value='lastpage' />&pg.value=10" >尾     页</a></td>
