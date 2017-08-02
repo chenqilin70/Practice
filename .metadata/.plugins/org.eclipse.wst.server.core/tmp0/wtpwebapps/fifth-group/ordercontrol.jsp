@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>DouPHP 管理中心 - 商品列表 </title>
+<title>DouPHP 管理中心 - 订单列表 </title>
 <meta name="Copyright" content="Douco Design." />
 <link href="css/public.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -23,15 +23,24 @@ function douAction()
  var frm = document.forms['action'];
  frm.elements['new_cat_id'].style.display = frm.elements['action'].value == 'category_move' ? '' : 'none';
 }
-
+function tiao(){
+	window.close();
+	window.open("orderfy.jsp");
+}
 </script>
 </head>
 <body>
 <div id="dcWrap">
 <%@include file="Head.jsp" %>
 <div id="dcMain">
-<div id="urHere">DouPHP 管理中心<b>></b><strong>订单列表</strong> </div>   
-	<div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+<div id="urHere">DouPHP 管理中心<b>></b><strong>订单列表</strong> 
+ <button type="button" style="margin-left: 80%; border-style:none;
+                background-color:rgb(40,183,121); 
+                width:124px; 
+                height:35px; 
+                background-repeat:no-repeat;" onclick="tiao()"><font style="color: white">分页查询</font></button>
+</div>   
+	<div class="mainBox" style="height:550px;min-height:550px;">
         <h3>订单列表</h3>
     	<div class="filter">
     <form action="OrderAction!listorder" method="post">
@@ -42,61 +51,73 @@ function douAction()
                  </select>
      <input type="submit" value="确定">
     </form >
-   
+    <form action="OrderAction!listorderbyuser" method="post">
+    <input style="margin-left: 450px;border:2px solid black" type="text" name="username" placeholder="请输入用户姓名" />
+    <input type="submit" value="确定">
+     </form>
     </div>
-        <div id="list">
-    <form name="action" method="post" action="product.php?rec=action">
+    
+     <div id="list">
+    <form name="action" method="post" action="OrderAction!deleteorder">
     <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       <tr>
         <th width="22" align="center"><input name='chkall' type='checkbox' id='chkall' onclick='selectcheckbox(this.form)' value='check'></th>
         <th width="150" align="center">订单编号</th>
         <th align="left">商品信息</th>
          <th  align="center">商品总价</th>
-        <th  align="center">联系电话</th>
-       <th  align="center">收货人</th>
+<!--         <th  align="center">联系电话</th> -->
+<!--        <th  align="center">收货人</th> -->
         <th align="center">付款时间</th>
         <th width="80" align="center">商品状态</th>
           <th width="80" align="center">操作</th>
       </tr>
-       <s:action name="OrderAction!listorder" id="oo" namespace="/" > </s:action>
-     <s:iterator value="#attr.ao" > 
+      
+        <s:if test="as==null">
+       <s:action name="OrderAction!listorder" id="oo" namespace="/">  </s:action>
+       <s:iterator value="#attr.ao"> 
       <tr> 
-      <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
-       <td align="center"><s:property value="oid"/></td>
-      <td><s:property value="good.name"/>&nbsp;&nbsp;&nbsp;<s:property value="good.brand"/>&nbsp;&nbsp;<s:property value="good.description"/> <s:property value="prm.count"/>件&nbsp;&nbsp;<s:property value="good.basicprice"/>元 &nbsp;&nbsp;<s:property value="prm.discount"/>折 </td>
+      <td align="center"><input type="checkbox" name="box" value='<s:property value="oid"/>' /></td>
+       <td align="center" name="oid"><s:property value="oid"/></td>
+      <td><a href="OrderAction!listOrderbyoid?oid=<s:property value="oid"/>"><s:property value="good.name"/></a></td>
      <td align="left"><s:property value="tot"/></td>
-     <td align="left"><s:property value="te"/><s:property value="te"/></td>
-     <td align="left"><s:property value="pe"/></td>
      <td align="left"><s:property value="ti"/></td>
-     <td align="left"><s:property value="st"/></td>
-          <td align="left">发货<a> 编辑</td>
+     <td align="left"><s:if test="st==0">已发货</s:if> <s:if test="st==1">未发货</s:if></td>
+          <td align="left"><s:if test="st==0">已发货</s:if><s:if test="st==1"><a href="OrderAction!sendOrder?oid=<s:property value="oid"/>">发货</a></s:if></td>
      </tr>
      </s:iterator>
+    </s:if>
 
+
+       <s:if test="as!=null">
+       <s:action name="OrderAction!listorderbyuser" id="oo" namespace="/">  </s:action>
+       <s:iterator value="#attr.as"> 
+      <tr> 
+      <td align="center"><input type="checkbox" name="box" value='<s:property value="oid"/>' /></td>
+       <td align="center" name="oid"><s:property value="oid"/></td>
+      <td><a href="OrderAction!listOrderbyoid?oid=<s:property value="oid"/>"><s:property value="good.name"/></a></td>
+     <td align="left"><s:property value="tot"/></td>
+<%--      <td align="left"><s:property value="te"/><s:property value="te"/></td> --%>
+<%--      <td align="left"><s:property value="pe"/></td> --%>
+     <td align="left"><s:property value="ti"/></td>
+     <td align="left"><s:if test="st==0">已发货</s:if> <s:if test="st==1">未发货</s:if></td>
+          <td align="left"><s:if test="st==0">已发货</s:if><s:if test="st==1"><a href="OrderAction!sendOrder?oid=<s:property value="oid"/>">发货</a></s:if></td>
+     </tr>
+     </s:iterator>
+    </s:if>
         </table>
         
     <div class="action">
-     <select name="action" onchange="douAction()">
-      <option value="0">请选择...</option>
-      <option value="del_all">删除</option>
-      <option value="category_move">移动分类至</option>
+     <select name="sele">
+<!--       <option value="0">请选择</option> -->
+      <option value="1">删除</option>
+      <option value="2">发货</option>
      </select>
-     <select name="new_cat_id" style="display:none">
-      <option value="0">未分类</option>
-                  <option value="1"> 电子数码</option>
-                        <option value="4">- 智能手机</option>
-                        <option value="5">- 平板电脑</option>
-                        <option value="2"> 家居百货</option>
-                        <option value="3"> 母婴用品</option>
-                 </select>
      <input name="submit" class="btn" type="submit" value="执行" />
     </div>
     </form>
+    
     </div>
-    <div class="clear"></div>
-    <div class="pager">总计 15 个记录，共 1 页，当前第 1 页 | <a href="product.php?page=1">第一页</a> 上一页 下一页 <a href="product.php?page=1">最末页</a></div>               </div>
- </div>
- <div class="clear"></div>
+   
 <div id="dcFooter">
  <div id="footer">
   <div class="line"></div>

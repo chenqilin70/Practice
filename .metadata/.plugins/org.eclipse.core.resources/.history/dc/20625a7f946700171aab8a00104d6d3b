@@ -1,6 +1,0 @@
-select * from orders where month(TIME)='01' && dayofmonth(TIME)='01'
-desc orders
-
-select * from product
-
-insert into orderitems

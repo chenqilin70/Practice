@@ -1,0 +1,65 @@
+<%@page import="javax.imageio.ImageIO"%>
+<%@page import="java.awt.Font"%>
+<%@page import="java.util.Random"%>
+<%@page import="java.awt.Color"%>
+<%@page import="java.awt.Image"%>
+<%@page import="java.awt.Graphics"%>
+<%@page import="java.awt.image.BufferedImage"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+response.setContentType("image/jpg");//设置相应的内容类型
+response.setHeader("Pragma", "No-cache");
+response.setHeader("Cache-Control", "no-cache");
+response.setDateHeader("Expires", 0);
+
+BufferedImage  im=new BufferedImage(100, 40, Image.SCALE_DEFAULT);
+
+Graphics  g=im.getGraphics();
+
+g.setColor(Color.white);
+
+g.fillRect(0, 0, 100, 40);
+
+int  x=5;
+
+StringBuffer  code=new StringBuffer();
+for(int n=0;n<5;n++)
+{
+	g.setColor(new Color(new Random().nextInt(255), new Random().nextInt(255), new Random().nextInt(255)));
+	
+	g.fillRect(new Random().nextInt(100), new Random().nextInt(40), new Random().nextInt(10),new Random().nextInt(10));
+	g.drawLine(new Random().nextInt(100), new Random().nextInt(40), new Random().nextInt(100), new Random().nextInt(40));
+}
+for(int n=0;n<6;n++)
+{
+	int randomTextSize=new Random().nextInt(25)+20;
+	if(new Random().nextInt(2)==1)
+	{
+		g.setFont(new Font("宋体", Font.BOLD, randomTextSize));
+	}else 
+	{
+		if(new Random().nextInt(2)==2)
+    	{
+    		g.setFont(new Font("黑体", Font.ITALIC, randomTextSize));
+    	}else
+    	{
+    		g.setFont(new Font("楷体", Font.PLAIN, randomTextSize));
+    	}
+	}
+	int randomNum=new Random().nextInt(10);
+	code.append(randomNum);
+	request.getSession().setAttribute("code", code);//将生成的验证码存储到session中，方便登陆的servlet访问这个系统生成的验证码
+	g.setColor(new Color(new Random().nextInt(255), new Random().nextInt(255), new Random().nextInt(255)));
+	
+	g.drawString(randomNum+"", x, 30);
+	x+=randomTextSize/2;
+}
+
+ImageIO.write(im, "jpg", response.getOutputStream());
+response.getOutputStream().flush();
+response.getOutputStream().close();
+response.flushBuffer();
+out.clear();
+out=pageContext.pushBody();
+%>

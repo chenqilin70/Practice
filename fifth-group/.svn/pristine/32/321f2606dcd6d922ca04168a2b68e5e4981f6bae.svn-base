@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+
+	<package name="Order" namespace="/" extends="struts-default">
+	
+	<interceptors>
+			<interceptor name="limit" class="com.oracle.struts.model.action.LimitAction">
+			</interceptor>
+		</interceptors>
+		<global-results >
+			<result name="nolimit">nolimit.jsp</result>
+			<result name="onuserlogin">login.jsp</result>
+		</global-results>
+	<action name="OrderAction" class="com.oracle.struts.model.action.OrderAction">	
+	<result name="success">/ordercontrol.jsp</result>
+	<result name="send">/ordercontrol.jsp</result>
+	<result name="listoid">/UpdateOrder.jsp</result>
+	<result name="up">/ordercontrol.jsp</result>
+	<result name="deleteok">/ordercontrol.jsp</result>
+	<result name="page">/ordercontrol.jsp</result>
+	<result name="usr">/ordercontrol.jsp</result>
+	<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="limit"></interceptor-ref>
+	</action>
+	</package>
+</struts>

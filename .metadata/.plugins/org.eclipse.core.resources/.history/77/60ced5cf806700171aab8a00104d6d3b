@@ -1,5 +1,0 @@
-select * from orders
-
-select * from product
-
-insert into orderitems

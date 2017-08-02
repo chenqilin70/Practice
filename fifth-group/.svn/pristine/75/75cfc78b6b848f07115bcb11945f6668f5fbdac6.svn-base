@@ -1,0 +1,202 @@
+package com.oracle.struts.model.action;
+
+import java.util.List;
+
+import javax.servlet.ServletContext;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.mysql.shopping.model.bean.Page;
+import com.mysql.shopping.model.dao.NoticeDAOimp;
+import com.opensymphony.xwork2.ActionSupport;
+
+import admin.com.oracle.model.bean.Notice;
+
+public class NoticeAction extends ActionSupport {
+	private Notice n;
+	private NoticeDAOimp dao;
+	private List<Notice> notices;
+	private int id;
+	private String message;
+	private int date;
+	private String dat;
+	private int page;
+	private int count;
+	private Page p;
+
+	
+	public Page getP() {
+		return p;
+	}
+
+	public void setP(Page p) {
+		this.p = p;
+	}
+
+	public int getPage() {
+		return page;
+	}
+
+	public void setPage(int page) {
+		this.page = page;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
+	public String getDat() {
+		return dat;
+	}
+
+	public void setDat(String dat) {
+		this.dat = dat;
+	}
+
+	public int getDate() {
+		return date;
+	}
+
+	public void setDate(int date) {
+		this.date = date;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public List<Notice> getNotices() {
+		return notices;
+	}
+
+	public void setNotices(List<Notice> notices) {
+		this.notices = notices;
+	}
+
+	public Notice getN() {
+		return n;
+	}
+
+	public void setN(Notice n) {
+		this.n = n;
+	}
+
+
+
+	public NoticeAction() {
+		dao=new NoticeDAOimp();
+	}
+
+	public String addNotice(){
+		System.out.println("inter addNotice");
+		System.out.println(n);
+		boolean re=dao.add(n);
+		notices=dao.loadAllnotice(1, 20);
+		System.out.println(notices);
+		return re==true?"addSuccess":"addFail";
+
+	}
+	
+	public String loadAllnotice(){
+		System.out.println("inter loadAllnotice");
+		
+		int nowpage=page;
+		int firstpage=1;
+		int allcount=dao.getAllProductCount();
+		int lastpage=(allcount%count==0)?(allcount/count):(allcount/count+1);
+		int prepage=(nowpage==1)?1:(nowpage-1);
+		int nextpage=(nowpage==lastpage)?lastpage:(nowpage+1);
+		//将需要传入d几个参数封装成一个对象
+		p=new Page(count,nowpage,firstpage,prepage,nextpage,lastpage,allcount);
+		
+		notices=dao.loadAllnotice(page,count);
+		System.out.println(notices);
+		ServletActionContext.getRequest().setAttribute("n", notices);
+		ServletActionContext.getRequest().setAttribute("p", p);
+		return notices!=null?"selectAllsuccess":"selectAllfail";
+
+	}
+	
+	public String updateNotice(){
+		System.out.println("inter updateNotice");
+		System.out.println(n);
+		boolean re=dao.update(n);
+		return re?"updateSuccess":"updateFail";
+		
+	}
+	
+	public String searchNoticeById(){
+		System.out.println("inter searchNoticeById");
+		System.out.println("id  "+id);
+		n=dao.searchNoticeById(id);
+		System.out.println(n);
+		
+		return "searchidSuccess";
+	}
+	
+	public String lookNoticeById(){
+		System.out.println("inter searchNoticeById");
+		System.out.println("id  "+id);
+		n=dao.searchNoticeById(id);
+		System.out.println(n);
+		
+		return "lookNoticeSuccess";
+	}
+	
+	public String deleteNotice(){
+		System.out.println("inter deleteNotice");
+		System.out.println(id);
+		boolean re=dao.delete(id);
+		if(re){
+			message="删除成功";
+			return "deleteSuccess";
+		}else{
+			message="删除失败";
+			return "deleteFail";
+		}
+	}
+	
+	public String selectNotice(){
+		System.out.println("inter selectNotice");
+		System.out.println(date);
+		notices=dao.selectNotice(date);
+		System.out.println(notices);
+		return notices!=null?"selectSuccess":"selectFail";
+	}
+	
+	public String selectAppointNotice(){
+		System.out.println("inter selectAppointNotice");
+		System.out.println(dat);
+		notices=dao.selectAppointNotice(dat);
+		System.out.println(notices);
+		return notices!=null?"selectAppointSuccess":"selectAppointFail";
+	}
+	
+	public String selectRoughNotice(){
+		notices=dao.selectRoughNotice();
+		ServletActionContext.getRequest().setAttribute("n1", notices);
+		return "selectRoughSuccess";
+		
+	}
+	
+	
+	
+	
+
+}

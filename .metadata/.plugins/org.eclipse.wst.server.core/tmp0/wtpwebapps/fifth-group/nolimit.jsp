@@ -26,16 +26,12 @@
  }
  
  </script>
-</head>
+ </head>
 <body>
-<div id="dcWrap">
-<%@include file="Head.jsp" %>
-<div id="dcMain">
-	<div id="urHere"></div>   
-		<div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-		<h3>您没有权限查看该内容</h3>
+<div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+		<h3 align="center">您没有权限这么做</h3>
+	<a href="index.jsp" ><h3 align="center">点击返回首页</h3></a>
 </div>
-</div>
-</div>
+
 </body>
 </html>

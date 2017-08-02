@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!--配置国际化全局文件，全局的,里面的value是自己定义的，根据配置的文件前缀-->
+	<constant name="struts.custom.i18n.resources" value="product"></constant> 
+	<package name="Product" namespace="/" extends="struts-default"> 
+	
+		<!-- 国际化的拦截器 -->
+		<interceptors>
+			<interceptor name="i18nCookie" class="org.apache.struts2.interceptor.I18nInterceptor" ></interceptor>
+		</interceptors>
+		<!-- 配置的国际化的action -->
+		<action name="locale" class="com.oracle.struts.model.action.ProductAction" method="execute">
+			<result name="request">/goodcontrol.jsp</result>
+		</action>
+		
+		<!-- 配置基于表单的文件上传action -->
+		<action name="addProductAction" class="com.oracle.struts.model.action.ProductAction" method="addproduct">
+			<!-- 定义局部拦截器，设置为默认值 -->
+			<interceptor-ref name="defaultStack">
+				<!-- 限制上传文件的最大值 -->
+                <param name="fileUpload.maximumSize">500000</param>
+                <!-- 容许文件上传的类型 -->
+                <param name="fileUpload.allowedTypes">text/plain,application/vnd.ms-powerpoint,image/gif,image/jpg,image/jpeg</param>
+                <!-- 容许文件上传的拓展名 -->
+                <param name="fileUpload.allowedExtensions">.txt,.ppt,.jpg,.jpeg,.gif</param>
+            </interceptor-ref>
+			<result name="addsuccess">/goodcontrol.jsp</result>
+			<result name="adderror">/error.jsp</result>
+		</action>
+		
+		<!-- 配置查询商品的action  -->
+		<action name="selectProductAction" class="com.oracle.struts.model.action.ProductAction" method="selectproduct">
+			<result name="selectsuccess">/goodcontrol.jsp</result>	
+			<result name="selecterror">/error.jsp</result>	
+		</action>
+		<action name="selectProductAction1" class="com.oracle.struts.model.action.ProductAction" >
+			<result name="success">/producttable.jsp</result>	
+			<result name="selectsuccess">/producttable.jsp</result>	
+			<result name="selectseris">/producttable.jsp</result>	
+		</action>
+		
+		<!-- 配置获取单一商品信息的action  -->
+		<action name="GetProductAction" class="com.oracle.struts.model.action.ProductAction" method="getproduct">
+			<result name="getsuccess">/updateproduct.jsp</result>	
+			<result name="geterror">/error.jsp</result>	
+		</action>
+		
+		<!-- 配置更新商品的action  -->
+		<action name="updateProductAction" class="com.oracle.struts.model.action.ProductAction" method="updateproduct">
+			<result name="updatesuccess">/goodcontrol.jsp</result>	
+			<result name="updateerror">/error.jsp</result>		
+		</action>
+		
+		<!-- 配置更新商品的action  -->
+		<action name="checkProductAction" class="com.oracle.struts.model.action.ProductAction" method="checkproduct">
+			<result name="checksuccess">/productinfo.jsp</result>	
+			<result name="checkerror">/error.jsp</result>		
+		</action>
+		
+		<!-- 配置删除商品的action  -->
+		<action name="deleteProductAction" class="com.oracle.struts.model.action.ProductAction" method="deleteproduct">
+			<result name="deletesuccess">/goodcontrol.jsp</result>	
+			<result name="deleteerror">/error.jsp</result>		
+		</action>
+		
+		<!--配置导出商品的action-->
+		<action name="outputProductAction" class="com.oracle.struts.model.action.ProductAction" method="outputproduct">
+			<result name="excel" type="stream">
+				<param name="contentType">  
+            		application/vnd.ms-excel  
+        		</param>  
+        		<param name="inputName">excelStream</param>  
+        		<!-- 只有这个地方需要改成在action类里面定义的 -->
+        		<param name="contentDisposition">  
+            		attachment;filename="${fileName}"  
+        		</param>
+        		<param name="bufferSize">2048</param> 
+			</result>
+			<result></result>
+		</action>
+		
+	</package>
+</struts>

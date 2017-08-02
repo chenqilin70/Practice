@@ -1,0 +1,273 @@
+package com.oracle.struts.model.action;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.mysql.shopping.model.dao.BackstageUserDAOImp;
+import com.opensymphony.xwork2.ActionSupport;
+
+import admin.com.oracle.model.bean.BackstageUser;
+import admin.com.oracle.model.bean.Identity;
+import admin.com.oracle.model.bean.Limitbean;
+
+public class UserAction extends ActionSupport {
+	private BackstageUser user;
+	private Set<Identity> identitylist;
+	private List<BackstageUser> controlusers;
+	private List<BackstageUser> listmanage;
+	private List<Limitbean> limitlist;
+	private int id;
+	private int online;
+	private int userid;
+	private String limitids;
+	private List<BackstageUser> users;
+	
+
+
+	public List<BackstageUser> getListmanage() {
+		return listmanage;
+	}
+
+	public void setListmanage(List<BackstageUser> listmanage) {
+		this.listmanage = listmanage;
+	}
+
+	public List<BackstageUser> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<BackstageUser> users) {
+		this.users = users;
+	}
+
+	public String getLimitids() {
+		return limitids;
+	}
+
+	public void setLimitids(String limitids) {
+		this.limitids = limitids;
+	}
+
+	public List<Limitbean> getLimitlist() {
+		return limitlist;
+	}
+
+	public void setLimitlist(List<Limitbean> limitlist) {
+		this.limitlist = limitlist;
+	}
+
+	public int getUserid() {
+		return userid;
+	}
+
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getOnline() {
+		return online;
+	}
+
+	public void setOnline(int online) {
+		this.online = online;
+	}
+
+	public List<BackstageUser> getControlusers() {
+		return controlusers;
+	}
+
+	public void setControlusers(List<BackstageUser> controlusers) {
+		this.controlusers = controlusers;
+	}
+
+	public Set<Identity> getIdentitylist() {
+		return identitylist;
+	}
+
+	public void setIdentitylist(Set<Identity> identitylist) {
+		this.identitylist = identitylist;
+	}
+
+	public BackstageUser getUser() {
+		return user;
+	}
+
+	public void setUser(BackstageUser user) {
+		this.user = user;
+	}
+	
+	
+//	//加载权限表
+//	public String listlimit(){
+//		BackstageUserDAOImp b=new BackstageUserDAOImp();
+//		limitlist=b.listlimit();
+//		return null;
+//	}
+	
+	//删除管理员
+	public String usermanagerdelete(){
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		if(b.delete(userid)){
+			return "deletemanagerrsuccess";
+		}else{
+			return "deletefail";		
+		}
+	}
+	
+	//添加管理员
+	public String addmanager(){
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		user.setUserid(0);
+		user.setIdentityid(b.getidentityid(user.getPosition()));
+		user.setOnline(0);
+		boolean re=b.add(user);
+		return re?"addmanager":"addmanagerfail";
+	}
+	
+	//更新管理员
+	public String updatemanager(){
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		user.setIdentityid(b.getidentityid(user.getPosition()));
+		user.setLimit(b.listlimit());
+		boolean re=b.update(user);
+		return re?"updatemanager":"updatemanagerfail";
+	}
+	
+	//获取单个管理员
+	public String getmanagerbyid(){
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		limitlist=b.listlimit();
+		user=b.getuserbyid(userid);
+		return "getmanagerid";
+	}
+	
+	
+	//获取所有管理员
+	public String getmanager(){
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		listmanage = b.getmanager();
+		return "getmanagersuccess";
+	}
+	
+	//修改用户
+	public String updateuser(){
+		String s=this.getLimitids();
+		String[] st=null;
+		List<Limitbean> conlimit=null;
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		if(s!=null){
+			st=s.split(",");
+			List<Integer> l=new ArrayList<>();
+			for(int i=0;i<st.length;i++){
+				l.add(Integer.valueOf(st[i].trim()));
+			}
+			limitlist=b.listlimit();
+			conlimit=new ArrayList<>();
+			for(Limitbean limitbean:limitlist) {
+				for(int i:l){
+					if(i==limitbean.getLimitid()){
+						conlimit.add(limitbean);
+						break;
+					}
+				}
+			}
+		}
+		user.setIdentityid(b.getidentityid(user.getPosition()));
+		user.setLimit(conlimit);
+		boolean bo=b.update(user);
+		return bo?"updatesuccess":"updatefail";
+	}
+	
+	//加载要修改的用户
+	public String useredit(){
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		limitlist=b.listlimit();
+		user=b.getuserbyid(userid);
+		
+		for (Limitbean  l: limitlist) {
+			for(Limitbean li : user.getLimit()){
+				if(li.getLimitid()==l.getLimitid()){
+					l.setJudge("1");
+					break;
+				}else{
+					l.setJudge("0");
+				}
+			}
+		}
+		user.setLimit(limitlist);
+		return "useredit";
+		
+	}
+	
+	//用户删除
+	public String userdelete(){
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		if(b.delete(userid)){
+			return "deleteusersuccess";
+		}else{
+			return "deletefail";		
+		}
+	}
+	
+	//用户启用控制
+	public String usercontrol(){
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		BackstageUser user=b.getuserbyid(id);
+		if(user.getIdentityid()==1){
+			user.setLimit(b.listlimit());
+			b.addlimit(user);
+			b.usercontrol(id, online);
+		}else{
+			b.usercontrol(id, online);
+		}
+		return null;
+	}
+	
+	//加载身份
+	public String listidentity(){
+		HttpSession se=ServletActionContext.getRequest().getSession();
+		BackstageUser logeduser=(BackstageUser)se.getAttribute("user");
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		identitylist=b.listcontrolidentity(logeduser);
+		return "identitylist";
+	}
+	
+	//加载可操作的用户
+	public String listcontroluser(){
+		HttpSession se=ServletActionContext.getRequest().getSession();
+		BackstageUser logeduser=(BackstageUser)se.getAttribute("user");
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		controlusers=new ArrayList<>();
+		controlusers=b.getcontroluser(logeduser);
+		return "listcontrolsuccess";
+		
+	}
+	
+	//添加用户
+	public String adduser(){
+		BackstageUserDAOImp b=new BackstageUserDAOImp();
+		for (BackstageUser backstageuser : users) {
+			backstageuser.setUserid(0);
+			backstageuser.setIdentityid(b.getidentityid(backstageuser.getPosition()));
+			backstageuser.setOnline(1);
+			if(b.add(backstageuser)){
+			}else {
+				return "adderror";
+			}
+		}
+		return "addsuccess";
+	}
+}

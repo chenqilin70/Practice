@@ -128,9 +128,9 @@
 <div id="dcWrap">
 <%@include file="Head.jsp" %>
 <div id="dcMain">
-<div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong> </div>   
+<div id="urHere">FiveGroup<b>></b><strong>添加分类</strong> </div>   
 <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-    <form action="addProductAction!addproduct" method="post" style="width: 1200px;margin-top:-10px;">
+    <form action="addProductAction!addproduct" method="post" style="width: 1200px;margin-top:-10px;" enctype="multipart/form-data">
     	<table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       		<tr>
       			<td width="80" align="right">商品名称</td>
@@ -174,7 +174,7 @@
       <tr>
        <td align="right">商品图片</td>
        <td>
-        <input type="text" name="p.image" value="" size="40" class="inpMain" />
+        <input type="file" name="p.image" value="" size="40" class="inpMain" />
        </td>
       </tr>
       <tr>

@@ -1,5 +1,0 @@
-@CHARSET "UTF-8";
-#date_distribution{
-	width: 1200px;
-	height:500px;
-}

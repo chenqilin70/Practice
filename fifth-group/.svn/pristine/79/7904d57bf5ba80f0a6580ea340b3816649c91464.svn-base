@@ -1,0 +1,35 @@
+<?xml version="1.0"  ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+    <hibernate-configuration>
+	<session-factory>
+	<!-- 数据库用户名 -->
+	<property name="connection.username">FiveUser</property>
+	<!-- 数据库用户密码 -->
+	<property name="connection.password">123456</property>
+	<!-- 驱动类 -->
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	<!-- 数据库URL -->
+	<property name="connection.url">jdbc:mysql://120.24.244.103:3306/Backstage</property>
+	<!-- 数据库方言-->
+	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+	<!-- 是否在SessionFactory创建后，自动创建数据库表，none/create/create-drop/update-->
+	<property name="hbm2ddl.auto">none</property>
+	<!-- 是否把执行的SQL语句输出到控制台 -->
+	<property name="show_sql">true</property>
+	<!-- 是否把控制台SQL语句格式化 -->
+	<property name="format_sql">true</property>
+	
+	
+	<!-- 映射文件配置，配置文件名必须包含其相对于根的全路径 -->
+<!-- 	<mapping resource="admin/com/oracle/model/bean/BackstageUser.hbm.xml" />	 -->
+<!-- 	<mapping resource="admin/com/oracle/model/bean/Identity.hbm.xml" />	 -->
+<!-- 	<mapping resource="admin/com/oracle/model/bean/Limitbean.hbm.xml" />	 -->
+	<mapping resource="admin/com/oracle/model/bean/Notice.hbm.xml" />	
+<!-- 	<mapping resource="admin/com/oracle/model/bean/Product.hbm.xml" />	 -->
+<!-- 	<mapping resource="admin/com/oracle/model/bean/ProductPage.hbm.xml" />	 -->
+		
+	</session-factory>
+
+</hibernate-configuration>

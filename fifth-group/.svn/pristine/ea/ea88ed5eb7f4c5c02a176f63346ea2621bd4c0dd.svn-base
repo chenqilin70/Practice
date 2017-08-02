@@ -1,0 +1,413 @@
+package com.mysql.shopping.model.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import admin.com.oracle.model.bean.BackstageUser;
+import admin.com.oracle.model.bean.Identity;
+import admin.com.oracle.model.bean.Limitbean;
+
+public class BackstageUserDAOImp extends BaseDAOimp implements BackstageUserDAO {
+
+	@Override
+	public boolean add(Object obj) {
+		BackstageUser user=(BackstageUser)obj;
+		//获取一个连接
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		int i=0;
+		boolean b=false;
+		try {
+			pre=c.prepareStatement("insert into USERMANAGE values(?,?,?,?,?,?,?,?,?)");
+			pre.setInt(1, user.getUserid());
+			pre.setString(2, user.getUsername());
+			pre.setString(3, user.getPassword());
+			pre.setString(4, user.getRealname());
+			pre.setString(5, user.getEmail());
+			pre.setString(6, user.getSex());
+			pre.setInt(7, user.getAge());
+			pre.setInt(8, user.getOnline());
+			pre.setInt(9, user.getIdentityid());
+			i=pre.executeUpdate();
+			b=(i==0?false:true);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// TODO Auto-generated method stub
+		disposeResource(c, pre);
+		return b;
+	}
+
+	@Override
+	public boolean delete(Object obj) {
+		int userid=(int)obj;
+		//获取一个连接
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		try {
+			deletelimit(userid);
+			pre=c.prepareStatement("delete from USERMANAGE where userid=?");
+			pre.setInt(1, userid);
+			int i=pre.executeUpdate();
+			if(i==0){
+				disposeResource(c, pre);
+				return false;
+			}else{
+				disposeResource(c, pre);
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// TODO Auto-generated method stub
+		disposeResource(c, pre);
+		return false;	
+	}
+
+	@Override
+	public boolean update(Object obj) {
+		BackstageUser user=(BackstageUser)obj;
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		boolean b=false;
+		try {
+			pre=c.prepareStatement("update USERMANAGE set password=?,realname=?,email=?,sex=?,age=?,identityid=? where userid=?");
+			pre.setString(1, user.getPassword());
+			pre.setString(2, user.getRealname());
+			pre.setString(3, user.getEmail());
+			pre.setString(4, user.getSex());
+			pre.setInt(5, user.getAge());
+			pre.setInt(6, user.getIdentityid());
+			pre.setInt(7, user.getUserid());
+			int i=pre.executeUpdate();
+			if(i!=0) b=true;
+			deletelimit(user.getUserid());
+			if(user.getLimit()==null){
+				return b;
+			}else{
+				for(Limitbean l:user.getLimit()){
+					Connection c1=getConnection();
+					PreparedStatement pre1=null;
+					pre1=c1.prepareStatement("insert into USER_LIMIT values(?,?)");
+					pre1.setInt(1, user.getUserid());
+					pre1.setInt(2, l.getLimitid());
+					i=pre1.executeUpdate();
+					disposeResource(c1, pre1);
+					if(i!=0) b=true;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// TODO Auto-generated method stub
+		disposeResource(c, pre);
+		return b;
+	}
+
+	@Override
+	public Object listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	//添加权限的dao方法
+	public boolean addlimit(BackstageUser user){
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		int i=0;
+		boolean b=false;
+		deletelimit(user.getUserid());
+		try {
+			for(Limitbean l:user.getLimit()){
+				pre=c.prepareStatement("insert into USER_LIMIT values(?,?)");
+				pre.setInt(1, user.getUserid());
+				pre.setInt(2, l.getLimitid());
+				i=pre.executeUpdate();
+				if(i!=0) b=true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return b;
+	}
+	
+	//加载所有管理员
+	public List<BackstageUser> getmanager(){
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		ResultSet res=null;
+		List<BackstageUser> lm=null;
+		
+		try {
+			pre=c.prepareStatement("select * from USERMANAGE where identityid=1");
+			res=pre.executeQuery();
+			lm=new ArrayList<>();
+			while(res.next()){
+				BackstageUser user=new BackstageUser();
+				user.setUserid(res.getInt("userid"));
+				user.setUsername(res.getString("username"));
+				user.setPassword(res.getString("password"));
+				user.setRealname(res.getString("realname"));
+				user.setEmail(res.getString("email"));
+				user.setSex(res.getString("sex"));
+				user.setAge(res.getInt("age"));
+				user.setOnline(res.getInt("online"));
+				user.setIdentityid(res.getInt("identityid"));
+				user.setPosition(getposition(user.getIdentityid()));
+				user.setLimit(getlimit(user.getUserid()));
+				lm.add(user);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(c, pre, res);
+		return lm;
+	}
+	
+	//获取权限表
+	public List<Limitbean> listlimit(){
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		ResultSet res=null;
+		List<Limitbean> i=null;
+		try {
+			pre=c.prepareStatement("select * from LIMITTABLE");
+			res=pre.executeQuery();
+			i=new ArrayList<>();
+			while(res.next()){
+				Limitbean l=new Limitbean();
+				l.setLimitid(res.getInt("limitid"));
+				l.setLimitname(res.getString("limitname"));
+				l.setLimitaction(res.getString("limitaction"));
+				l.setLimitcontrol(res.getString("limitcontrol"));
+				i.add(l);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(c, pre, res);
+		return i;
+	}
+	
+	//据用户ID get用户
+	public BackstageUser getuserbyid(int userid){
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		ResultSet res=null;
+		BackstageUser user=null;
+		try {
+			pre=c.prepareStatement("select * from USERMANAGE where userid=?");
+			pre.setInt(1, userid);
+			res=pre.executeQuery();
+			if(res.next()){
+				user=new BackstageUser();
+				user.setUserid(res.getInt("userid"));
+				user.setUsername(res.getString("username"));
+				user.setPassword(res.getString("password"));
+				user.setRealname(res.getString("realname"));
+				user.setEmail(res.getString("email"));
+				user.setSex(res.getString("sex"));
+				user.setAge(res.getInt("age"));
+				user.setOnline(res.getInt("online"));
+				user.setIdentityid(res.getInt("identityid"));
+				user.setPosition(getposition(user.getIdentityid()));
+				user.setLimit(getlimit(user.getUserid()));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(c, pre, res);
+		return user;
+	}
+	
+	//用户启用控制
+	public boolean usercontrol(int id,int on){
+		//获取一个连接
+				Connection c=getConnection();
+				PreparedStatement pre=null;
+		try {
+			pre=c.prepareStatement("update USERMANAGE set online=? where userid=?");
+			pre.setInt(1, on);
+			pre.setInt(2, id);
+			int i=pre.executeUpdate();
+			if(i==0){
+				disposeResource(c, pre);
+				return false;
+			}else{
+				disposeResource(c, pre);
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(c, pre);
+		return false;
+	}
+	
+	//获取权限比当前用户低的用户
+	public List<BackstageUser> getcontroluser(BackstageUser user){
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		ResultSet res=null;
+		List<BackstageUser> l=null;
+		try {
+			pre=c.prepareStatement("select * from USERMANAGE where identityid>?");
+			pre.setInt(1, user.getIdentityid());
+			res=pre.executeQuery();
+			l=new ArrayList<>();
+			while(res.next()){
+				BackstageUser b=new BackstageUser();
+				b.setUserid(res.getInt("userid"));
+				b.setUsername(res.getString("username"));
+				b.setPassword(res.getString("password"));
+				b.setRealname(res.getString("realname"));
+				b.setEmail(res.getString("email"));
+				b.setSex(res.getString("sex"));
+				b.setAge(res.getInt("age"));
+				b.setOnline(res.getInt("online"));
+				b.setIdentityid(res.getInt("identityid"));
+				b.setPosition(getposition(b.getIdentityid()));
+				l.add(b);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(c, pre, res);
+		return l;
+	}
+	
+	//获取比当前用户权限低的身份表
+	public Set<Identity> listcontrolidentity(BackstageUser user){
+		//获取一个连接
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		ResultSet res=null;
+		Set<Identity> se=null;
+		try {
+			pre=c.prepareStatement("select * from IDENTITY where identityid>?");
+			pre.setInt(1, user.getIdentityid());
+			res=pre.executeQuery();
+			se=new HashSet<>();
+			while(res.next()){
+				Identity i=new Identity();
+				i.setIdentityid(res.getInt("identityid"));
+				i.setPosition(res.getString("POSITION"));
+				se.add(i);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(c,pre,res);
+		return se;
+	}
+	
+	
+	//获取用户的权限
+	public List<Limitbean> getlimit(int userid){
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		ResultSet res=null;
+		List<Limitbean> i=null;
+		try {
+			pre=c.prepareStatement("select u.*,l.* from USER_LIMIT as u,LIMITTABLE as l where l.limitid=u.limitid and u.userid=? ");
+			pre.setInt(1, userid);
+			res=pre.executeQuery();
+			i=new ArrayList<>();
+				while(res.next()){
+					Limitbean l=new Limitbean();
+					l.setLimitid(res.getInt("limitid"));
+					l.setLimitname(res.getString("limitname"));
+					l.setLimitaction(res.getString("limitaction"));
+					l.setLimitcontrol(res.getString("limitcontrol"));
+					i.add(l);
+				}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(c, pre, res);
+		return i;
+	}
+	
+	//获取所有的身份
+	public Set<Identity> listidentity(){
+		//获取一个连接
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		ResultSet res=null;
+		Set<Identity> se=null;
+		try {
+			pre=c.prepareStatement("select * from IDENTITY");
+			res=pre.executeQuery();
+			se=new HashSet<>();
+			while(res.next()){
+				Identity i=new Identity();
+				i.setIdentityid(res.getInt("identityid"));
+				i.setPosition(res.getString("POSITION"));
+				se.add(i);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(c,pre,res);
+		return se;
+	}
+	
+	
+	//删除当前用户的权限
+	public boolean deletelimit(int userid){
+		Connection c=getConnection();
+		PreparedStatement pre=null;
+		boolean b=false;
+		try {
+			pre=c.prepareStatement("delete from USER_LIMIT where userid=?");
+			pre.setInt(1, userid);
+			int i=pre.executeUpdate();
+			if(i!=0){ b=true;}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(c, pre);
+		return b;
+	}
+	
+	public int getidentityid(String position){
+		Set<Identity> id=listidentity();
+		for (Identity identity : id) {
+			if(identity.getPosition().equals(position)){
+				return identity.getIdentityid();
+			}
+		}
+		return 0;
+	}
+	
+	public String getposition(int id){
+		Set<Identity> iden=listidentity();
+		for (Identity identity : iden) {
+			if(identity.getIdentityid()==id){
+				return identity.getPosition();
+			}
+		}
+		return null;
+	}
+
+
+}

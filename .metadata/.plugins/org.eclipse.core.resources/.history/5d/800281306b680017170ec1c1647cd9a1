@@ -1,9 +1,0 @@
-@CHARSET "UTF-8";
-#date_distribution{
-	width: 1400px;
-	height:300px;
-}
-#addr_distribution{
-	width: 1400px;
-	height:900px;
-}

@@ -1,0 +1,337 @@
+package com.mysql.shopping.model.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import com.mysql.shopping.model.bean.Address;
+import com.mysql.shopping.model.bean.Goods;
+import com.mysql.shopping.model.bean.Orderitems;
+import com.mysql.shopping.model.bean.order;
+
+public class OrdersDaoImp extends BaseDAOimp implements OrdersDao {
+
+	@Override
+	public boolean add(Object obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(Object obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean update(Object obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<order> listOrder(int st) {
+		ArrayList<order> os=new ArrayList<>();
+		order  o=null;
+		Address a=null;
+		Set<Orderitems>  prm=null;
+		Connection  con=getConnection();
+		PreparedStatement pre=null;
+		ResultSet  rs=null;
+		try {
+			pre=con.prepareStatement("select o.*,oi.*,a.* ,p.* from orders as o ,orderitems as oi,address as a ,product as p where o.orderid=oi.orderid and o.addressid=a.addressid and oi.productid=p.productid and o.status=?");
+			pre.setInt(1,st);
+			rs=pre.executeQuery();
+			while(rs.next())
+			{
+				
+				o=new order();
+					o.setOid(rs.getString("o.orderid"));
+					o.setTi(rs.getString("time"));
+					o.setSt(rs.getInt("status"));
+				a=new Address();
+					a.setAddressId(rs.getInt("addressid"));
+					a.setProvince(rs.getString("province"));
+					a.setCity(rs.getString("city"));
+					a.setArea(rs.getString("area"));
+					a.setStreet(rs.getString("street"));
+					a.setDetail(rs.getString("detail"));
+					a.setTel(rs.getString("tel"));
+					a.setUser(rs.getString("user"));
+					o.setTe(rs.getString("tel"));
+					o.setPe(rs.getString("user"));
+					o.setAd(a);
+					o.setTot(rs.getFloat("basicprice")*rs.getInt("count"));
+				
+				Orderitems  item=new Orderitems();
+				item.setCount(rs.getInt("count"));
+				item.setDiscount(rs.getFloat("discount"));
+				item.setOrderid(rs.getString("o.orderid"));
+				item.setOrderitemid(rs.getInt("orderitemid"));
+				item.setProductid(rs.getInt("productid"));
+				o.setPrm(item);
+				Goods g=new Goods();
+				g.setBasicprice(rs.getString("basicprice"));
+				g.setName(rs.getString("name"));
+				g.setBrand(rs.getString("brand"));
+				g.setDescription(rs.getString("description"));
+				g.setImage(rs.getString("image"));
+				o.setGood(g);
+				os.add(o);
+				}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		disposeResource(con, pre, rs);
+		return os;
+	
+}
+
+	@Override
+	public boolean deleteOrder(String oid) {
+     Connection con=getConnection();
+     PreparedStatement pre=null;
+     ResultSet rs=null;
+     try {
+		pre=con.prepareStatement("delete from orderitems  where orderid=?");
+		pre.setString(1, oid);
+		int i=pre.executeUpdate();
+		pre=con.prepareStatement("delete from orders  where orderid=?");
+		pre.setString(1, oid);
+		int a=pre.executeUpdate();
+		return a>0?true:false;
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+     disposeResource(con, pre);
+     System.out.println("删除失败");
+		return false;
+	}
+
+	@Override
+	public ArrayList<order> listallorder(String userid) {
+		// TODO Auto-generated method stub
+		ArrayList<order> os=new ArrayList<>();
+		order o=null;
+		Address a=null;
+		Set<Orderitems>  prm=null;
+		Connection con=getConnection();
+		PreparedStatement pre=null;
+		ResultSet rs=null;
+		try {
+			pre=con.prepareStatement("select o.*,oi.*,a.*,p.basicprice from orders as o ,orderitems as oi,address as a ,product as p where o.orderid=oi.orderid and o.addressid=a.addressid and oi.productid=p.productid and o.userid=?");
+			pre.setString(1, userid);
+			rs=pre.executeQuery();
+			while(rs.next())
+			{
+				o=new order();
+				//o.setUserid(rs.getInt("userid"));
+				o.setTi(rs.getString("time"));
+				o.setSt(rs.getInt("status"));
+				o.setOid(rs.getString("o.orderid"));
+				a=new Address();
+				a.setAddressId(rs.getInt("addressId"));
+				a.setProvince(rs.getString("province"));
+				a.setCity(rs.getString("city"));
+				a.setArea(rs.getString("area"));
+				a.setStreet(rs.getString("street"));
+				a.setDetail(rs.getString("detail"));
+				a.setTel(rs.getString("tel"));
+				a.setUser(rs.getString("user"));
+				o.setTe(rs.getString("tel"));
+				o.setPe(rs.getString("user"));
+				o.setAd(a);
+				o.setTot(rs.getFloat("basicprice"));
+				
+				Orderitems  item=new Orderitems();
+				item.setCount(rs.getInt("count"));
+				item.setDiscount(rs.getFloat("discount"));
+				item.setOrderid(rs.getString("o.orderid"));
+				item.setOrderitemid(rs.getInt("orderitemid"));
+				item.setProductid(rs.getInt("productid"));
+				
+				o.setPrm(item);
+				os.add(o);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+				
+		return os;
+	}
+
+	
+
+	@Override
+	public boolean sendOrder(String oid) {
+		Connection con=getConnection();
+		PreparedStatement pre=null;
+		ResultSet rs=null;
+		try {
+			pre=con.prepareStatement("update orders set status=0 where orderid= ?");
+		    pre.setString(1, oid);
+		   return pre.executeUpdate()>0?true:false;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(con, pre);
+		System.out.println("插入失败");
+		return false;
+	}
+
+	@Override
+	public order listOrder(String oid) {
+		order o=null;
+		Address a=null;
+		Set<Orderitems>  prm=null;
+		Connection con=getConnection();
+		PreparedStatement pre=null;
+		ResultSet rs=null;
+		try {
+			pre=con.prepareStatement("select o.*,oi.*,a.*,p.* from orders as o ,orderitems as oi,address as a ,product as p where o.orderid=oi.orderid and o.addressid=a.addressid and oi.productid=p.productid and o.orderid=?");
+			pre.setString(1, oid);
+			rs=pre.executeQuery();
+			while(rs.next())
+			{
+				o=new order();
+				//o.setUserid(rs.getInt("userid"));
+				o.setTi(rs.getString("time"));
+				o.setSt(rs.getInt("status"));
+				o.setOid(rs.getString("o.orderid"));
+				a=new Address();
+				a.setAddressId(rs.getInt("addressId"));
+				a.setProvince(rs.getString("province"));
+				a.setCity(rs.getString("city"));
+				a.setArea(rs.getString("area"));
+				a.setStreet(rs.getString("street"));
+				a.setDetail(rs.getString("detail"));
+				a.setTel(rs.getString("tel"));
+				a.setUser(rs.getString("user"));
+				o.setTe(rs.getString("tel"));
+				o.setPe(rs.getString("user"));
+				o.setAd(a);
+				o.setTot(rs.getFloat("basicprice"));
+				
+				Orderitems  item=new Orderitems();
+				item.setCount(rs.getInt("count"));
+				item.setDiscount(rs.getFloat("discount"));
+				item.setOrderid(rs.getString("o.orderid"));
+				item.setOrderitemid(rs.getInt("orderitemid"));
+				item.setProductid(rs.getInt("productid"));
+				
+				o.setPrm(item);
+				
+				Goods g=new Goods();
+				g.setBasicprice(rs.getString("basicprice"));
+				g.setName(rs.getString("name"));
+				g.setBrand(rs.getString("brand"));
+				g.setDescription(rs.getString("description"));
+				g.setImage(rs.getString("image"));
+				o.setGood(g);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+				
+		return o;
+	}
+
+	@Override
+	public boolean updateOrder(String oid,int count, String pe, String te, String pro,String cit,String area,String str) {
+		Connection con=getConnection();
+		System.out.println(oid+te+pro+cit+area+str);
+		PreparedStatement pre=null;
+		ResultSet rs=null;
+		try {
+			pre=con.prepareStatement("update orders o,address a,orderitems oi set oi.count=?,a.user=?,a.tel=?,a.province=?,a.city=?,a.area=?,a.street=?  where o.orderid=oi.orderid and o.userid=a.userid and o.orderid=?");
+		    pre.setInt(1, count);
+		    pre.setString(2, pe);
+		    pre.setString(3,te);
+		    pre.setString(4, pro);
+		    pre.setString(5, cit);
+		    pre.setString(6, area);
+		    pre.setString(7,str);
+		    pre.setString(8,oid);
+		    int i=pre.executeUpdate();
+		    System.out.println(i);
+		    return i>0?true:false;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(con, pre);
+	System.out.println("插入失败");
+		return false;
+
+	}
+
+	@Override
+	public List<order> listorderbypage(int page, int count) {
+		List<order> ls=new ArrayList<>();
+		Connection con=getConnection();
+		PreparedStatement pre=null;
+		ResultSet rs=null;
+		try {
+			pre=con.prepareStatement("select o.*,oi.*,p.* from orders o,orderitems oi,product p where o.orderid=oi.ORDERID and oi.productid=p.productid LIMIT ?,?");
+		    pre.setInt(1, (page-1)*count);
+		    pre.setInt(2, count);
+		    rs=pre.executeQuery();
+		    while(rs.next()){
+		    	Goods good=new Goods();
+		    	good.setName(rs.getString("name"));
+		    	
+		    	order o=new order();
+				o.setOid(rs.getString("o.orderid"));
+				o.setTi(rs.getString("time"));
+				o.setSt(rs.getInt("status"));
+				
+				Orderitems  item=new Orderitems();
+				item.setCount(rs.getInt("count"));
+				item.setDiscount(rs.getFloat("discount"));
+				item.setOrderid(rs.getString("o.orderid"));
+				item.setOrderitemid(rs.getInt("orderitemid"));
+				item.setProductid(rs.getInt("productid"));
+				o.setPrm(item);
+				o.setTot(rs.getFloat("basicprice")*rs.getInt("count"));
+				ls.add(o);
+		    }
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		disposeResource(con, pre);
+		return ls;
+	}
+
+	@Override
+	public int getAllorder() {
+		Connection  c=getConnection();
+		PreparedStatement pre=null;
+		ResultSet rs=null;
+		try {
+			//�ۺϺ���
+			pre=c.prepareStatement("select count(*) from orders,orderitems where orders.ORDERID=orderitems.ORDERID");
+		    rs=pre.executeQuery();
+		    rs.next();
+		    int i=rs.getInt(1);
+		    return i;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		disposeResource(c, pre, rs);
+		return 0;
+	}
+	}

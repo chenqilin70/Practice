@@ -25,6 +25,17 @@
      frm.elements['new_cat_id'].style.display = frm.elements['action'].value == 'category_move' ? '' : 'none';
  }
  
+ var tid=1;
+ function addtable() {
+ 	var t="<s:if test='identitylist==null'><s:action name='UserAction!listidentity' id='identitylist' namespace='/' ></s:action></s:if><table id='table"+tid+"' width='100%' border='0' cellpadding='8' cellspacing='0' class='tableBasic'><tr><th width='131'>用户"+tid+"</th><th>内容</th></tr><tr><td align='right'>用户名称</td><td><input type='text' name='users["+tid+"].username' value='' size='80' class='inpMain' /></td></tr><tr><td align='right'>用户密码</td><td><input type='password' name='users["+tid+"].password' value='' size='80' class='inpMain' /></td></tr><tr><td align='right'>真实姓名</td><td><input type='text' name='users["+tid+"].realname' value='' size='80' class='inpMain' /></td></tr><tr><td align='right'>电子邮件</td><td><input type='text' name='users["+tid+"].email' value='' size='80' class='inpMain' /></td></tr><tr><td align='right'>用户职位</td><td><select name='users["+tid+"].position'><s:iterator id='id' value='#identitylist.identitylist' ><option value='<s:property value='#id.position' />'><s:property value='#id.position' /></option></s:iterator></select></td></tr><tr><td align='right'>用户年龄</td><td><select name='users["+tid+"].age'><s:iterator var='i' begin='1' end='100'><option value='${i}'>${i}</option></s:iterator></select></td></tr><tr><td align='right'>用户性别</td><td><label for='rewrite_0'><input type='radio' name='users["+tid+"].sex' id='rewrite_0' value='男' checked='checked'>男</label><label for='rewrite_1'><input type='radio' name='users["+tid+"].sex' id='rewrite_1' value='女'>女</label></td></tr></table>";
+	$("#main").append(t);
+	tid++;
+}
+ 
+ function deletetable() {
+	tid--;
+	$("#table"+tid+"").remove();
+}
  </script>
 </head>
 <body>
@@ -37,36 +48,35 @@
 		<div class="items">
        		<form action="UserAction!adduser.action" method="post" enctype="multipart/form-data">
         	<div id="main">
-        	
         	<s:if test="identitylist==null">
 					<s:action name="UserAction!listidentity" id="identitylist" namespace="/" ></s:action>
 			</s:if>
 					
-        	<table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+        	<table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic" id="">
 	         	<tr>
-	           		<th width="131">名称</th>
+	           		<th width="131">用户0</th>
 	           		<th>内容</th>
 	         	</tr>
 	            <tr>
 	          		<td align="right">用户名称</td>
-	          		<td><input type="text" name="user.username" value="" size="80" class="inpMain" /></td>
+	          		<td><input type="text" name="users[0].username" value="" size="80" class="inpMain" /></td>
 	         	</tr>
 	         	<tr>
 	          		<td align="right">用户密码</td>
-	          		<td><input type="text" name="user.password" value="" size="80" class="inpMain" /></td>
+	          		<td><input type="password" name="users[0].password" value="" size="80" class="inpMain" /></td>
 	         	</tr>
 	         	<tr>
 	          		<td align="right">真实姓名</td>
-	          		<td><input type="text" name="user.realname" value="" size="80" class="inpMain" /></td>
+	          		<td><input type="text" name="users[0].realname" value="" size="80" class="inpMain" /></td>
 	         	</tr>
 	         	<tr>
 	          		<td align="right">电子邮件</td>
-	          		<td><input type="text" name="user.email" value="" size="80" class="inpMain" /></td>
+	          		<td><input type="text" name="users[0].email" value="" size="80" class="inpMain" /></td>
 	         	</tr>
 				<tr>
 					<td align="right">用户职位</td>
 					<td>
-					<select name="user.position">
+					<select name="users[0].position">
 					<s:iterator id="id" value="#identitylist.identitylist" >
 						<option value="<s:property value="#id.position" />"><s:property value="#id.position" /></option>
 					</s:iterator>
@@ -75,7 +85,7 @@
 	         	<tr>
 	          		<td align="right">用户年龄</td>
 	          		<td>
-	          		<select name="user.age">
+	          		<select name="users[0].age">
 	          		<s:iterator var="i" begin="1" end="100">
 					<option value="${i}">${i}</option>
 	          		</s:iterator>
@@ -86,10 +96,10 @@
 	          		<td align="right">用户性别</td>
 	          		<td>
                      <label for="rewrite_0">
-           			 <input type="radio" name="user.sex" id="rewrite_0" value="男" checked="checked">男
+           			 <input type="radio" name="users[0].sex" id="rewrite_0" value="男" checked="checked">男
            			 </label>
           			 <label for="rewrite_1">
-            		 <input type="radio" name="user.sex" id="rewrite_1" value="女">女
+            		 <input type="radio" name="users[0].sex" id="rewrite_1" value="女">女
           			 </label>
                      </td>
 	         	</tr>
@@ -97,12 +107,14 @@
         	</div>
 			<table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
 	         	<tr>
-	          	<td width="131">
-		           	<input name="" class="btn" type="button" value="+" />
-		           	<input name="" class="btn" type="button" value="x" />
+	          	<td width="57" align="left">
+		           	<input class="btn" onclick="addtable()" type="button" value="+" />
+	          	</td>
+	          	<td width="57" align="right">
+		           	<input class="btn" onclick="deletetable()" type="button" value="x" />
 	          	</td>
 	          	<td>
-		           	<input name="" class="btn" type="submit" value="提交" />
+		           	<input class="btn" type="submit" value="添加" />
 	          	</td>
 	         	</tr>
        		</table>

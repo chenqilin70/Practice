@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	<package name="usermanage" namespace="/" extends="struts-default" >
+		<interceptors>
+			<interceptor name="limit" class="com.oracle.struts.model.action.LimitAction">
+			</interceptor>
+		</interceptors>
+		<global-results >
+			<result name="nolimit">nolimit.jsp</result>
+		</global-results>
+		
+		
+		<action name="UserAction" class="com.oracle.struts.model.action.UserAction">
+			<result name="addsuccess">usercontrol.jsp</result>
+			<result name="adderror">index.jsp</result>
+			
+			<result name="deleteusersuccess">usercontrol.jsp</result>
+			<result name="deletefail">index.jsp</result>
+			
+			<result name="updatesuccess">usercontrol.jsp</result>
+			<result name="updatefail">index.jsp</result>
+			
+			<result name="addmanager">manager.jsp</result>
+			<result name="addmanagerfail">index.jsp</result>
+			
+			<result name="deletemanagerrsuccess">manager.jsp</result>
+
+			<result name="updatemanagerfail">index.jsp</result>
+			<result name="updatemanager">manager.jsp</result>
+			
+			<result name="identitylist">adduser.jsp</result>
+			
+			<result name="listcontrolsuccess">usercontroltable.jsp</result>
+			
+			
+			<result name="useredit">edituser.jsp</result>
+		
+			<result name="getmanagersuccess">managertable.jsp</result>
+			
+			<result name="getmanagerid">manageredit.jsp</result>
+			
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="limit"></interceptor-ref>
+		</action>
+		
+		
+	</package>
+</struts>

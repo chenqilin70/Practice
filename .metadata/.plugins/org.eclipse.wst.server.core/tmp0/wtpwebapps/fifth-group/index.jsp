@@ -11,7 +11,6 @@
 <script type="text/javascript" src="js/global.js"></script>
 </head>
 <body>
-
 <div id="dcWrap"> 
 <%@include file="Head.jsp" %>
 <div id="dcMain">
@@ -27,7 +26,6 @@
      	<li><a href="goodcontrol.jsp">商品管理</a></li>
      	<li><a href="statisticalcontrol.jsp">统计管理</a></li>
      	<li><a href="noticecontrol.jsp">公告管理</a></li>
-     	<li><a href="shujubfnoticecontrol.jsp">数据备份</a></li>
      	<li><a href="manager.jsp">网站管理员</a></li>
     </ul>
 	</div>

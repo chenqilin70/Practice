@@ -33,11 +33,8 @@
 <div id="dcMain">
 	<div id="urHere">杰仔专卖网<b>></b><strong>用户管理</strong> </div>   
 		<div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-		<h3><a href="adduser.jsp" class="actionBtn add">添加用户</a>用户管理</h3>
 		
 		<s:action name="UserAction!listcontroluser" namespace="/" executeResult="true"></s:action>
-			
-
 
 </div>
 </div>

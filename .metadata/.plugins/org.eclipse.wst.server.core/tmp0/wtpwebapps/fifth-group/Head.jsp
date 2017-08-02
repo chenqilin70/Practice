@@ -23,16 +23,14 @@
     	<li><a href="../index.php" target="_blank">查看站点</a></li>
     	<li><a href="index.php?rec=clear_cache">清除缓存</a></li>
     	<li><a href="http://www.mycodes.net" target="_blank">帮助</a></li>
-    	<li class="noRight"><a href="module.jsp">DouPHP+</a></li>
    	</ul>
     <ul class="navRight">
-    	<li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+    	<li class="M noLeft"><a href="JavaScript:void(0);">您好，${sessionScope.user.realname }</a>
      		<div class="drop mUser">
-      		<a href="manager.php?rec=edit&id=1">编辑我的个人资料</a>
-      		<a href="manager.php?rec=cloud_account">设置云账户</a>
+      		<a href="manager.jsp">编辑我的个人资料</a>
      		</div>
     	</li>
-    	<li class="noRight"><a href="login.php?rec=logout">退出</a></li>
+    	<li class="noRight"><a href="login.jsp">退出</a></li>
    </ul>
    </div>
    </div>
@@ -44,13 +42,12 @@
   		<li><a href="index.jsp"><i class="home"></i><em>管理首页</em></a></li>
  	</ul>
  	<ul>
-  		<li><a href="system.jsp"><i class="system"></i><em>系统设置</em></a></li>
   		<li><a href="usercenter.jsp"><i class="nav"></i><em>用户中心</em></a></li>
   		<li><a href="usercontrol.jsp"><i class="show"></i><em>用户管理</em></a></li>
 	</ul>
     <ul>
 		<li><a href="ordercontrol.jsp"><i class="productCat"></i><em>订单管理</em></a></li>
-	  	<li><a href="goodcontrol.jsp"><i class="product"></i><em>商品管理</em></a>
+	  	<li><a href="goodcontrol.jsp"><i class="product"></i><em><s:text name="productcontrol" ></s:text></em></a>
 	  		<ul>
 	  			<li><a href="usercenter.jsp"><i class="nav"></i><em>用户中心</em></a></li>
   				<li><a href="usercontrol.jsp"><i class="show"></i><em>用户管理</em></a></li>
@@ -62,29 +59,20 @@
   		<li><a href="noticecontrol.jsp"><i class="article"></i><em>公告管理</em></a></li>
  	</ul>
  	<ul class="bot">
-  		<li><a href="shujubfnoticecontrol.jsp"><i class="backup"></i><em>数据备份</em></a></li>
   		<li><a href="manager.jsp"><i class="manager"></i><em>网站管理员</em></a></li>
  	</ul>
 </div>
-<div  style="position:fixed;  height:250px;width:170px ;  background-image: url('images/notice.jpg');">
+<br/><br/>
+<div  style="position:fixed;  height:250px;width:170px ; border:1px solid gray; background-image: url('images/notice.jpg'); margin-left: 4px;">
 <br/><br/><br/><br/><div align="center"  style="font-family: '方正舒体';font-size: 25px; color: blue" >公告</div>
-<s:action name="NoticeAction!selectRoughNotice"  namespace="/">
-</s:action>
 
-<ul>
+<s:action name="NoticeAction1!selectRoughNotice"  namespace="/"></s:action>
+<marquee scrollamount="2" width="170px" height="120px" direction="up">
 <s:iterator value="#attr.n1">
-	<li><s:a href="noticecontrol.jsp"><s:property value="notice"/></s:a></li>
+	<s:a href="noticecontrol.jsp"><s:property value="notice"/></s:a>
 	<div align="right"><s:property value="date"/></div>
 	</s:iterator>
-	<s:else>
-	<li></li>
-	</s:else>
-</ul>
-
-
-
-
-
+</marquee>
 </div>
 
 </div>

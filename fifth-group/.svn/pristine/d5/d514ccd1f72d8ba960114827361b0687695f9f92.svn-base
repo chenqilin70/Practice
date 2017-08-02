@@ -1,0 +1,100 @@
+package com.mysql.shopping.model.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import admin.com.oracle.model.bean.BackstageUser;
+import admin.com.oracle.model.bean.Identity;
+import admin.com.oracle.model.bean.Limitbean;
+import com.mysql.shopping.model.dao.BackstageUserDAOyc;;
+
+
+public class BackstageUserDAOImpyc  extends BaseDAOimp implements BackstageUserDAOyc {
+
+	public BackstageUser login(String username, String password) {
+		BackstageUser user=null;
+		Connection  c=getConnection();
+		PreparedStatement  pre=null;
+		ResultSet  rs=null;
+		try {
+			pre=c.prepareStatement("select *  from USERMANAGE where username=? and password=?");
+			pre.setString(1, username);
+			pre.setString(2, password);
+			rs=pre.executeQuery();
+			if(rs.next()){
+				user=new BackstageUser();
+				user.setUserid(rs.getInt("userid"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
+				user.setRealname(rs.getString("realname"));
+				user.setEmail(rs.getString("Email"));
+				user.setSex(rs.getString("sex"));
+				user.setAge(rs.getInt("age"));
+				user.setOnline(rs.getInt("online"));
+				user.setIdentityid(rs.getInt("identityid"));
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		disposeResource(c, pre, rs);
+		if(user==null){
+			return null;
+		}else{
+			if (user.getOnline()==1) {
+				return user;
+			} else {
+				return null;
+			}
+		}
+		
+	}
+	
+	@Override
+	public boolean add(Object obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(Object obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean update(Object obj) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/*@Override
+	public boolean checkUsernameExsist(String username) {
+		Connection  c=getConnection();
+		PreparedStatement  pre=null;
+		try {
+			pre=c.prepareStatement("select *  from  USERMANAGE where username=?");
+			pre.setString(1, username);
+			ResultSet n=pre.executeQuery();
+			if(n.next())return true;
+			else return false;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			disposeResource(c, pre);
+			return false;
+		}
+	}
+*/
+}

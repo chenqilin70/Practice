@@ -1,0 +1,225 @@
+package com.oracle.struts.model.action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.mysql.shopping.model.bean.Page;
+import com.mysql.shopping.model.bean.order;
+import com.mysql.shopping.model.dao.OrdersDaoImp;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class OrderAction extends ActionSupport {
+private order order;
+private int st;
+private String uid;
+ArrayList<order> ao;
+private OrdersDaoImp dao;
+private String cat;
+private String oid;
+private String province;
+private String city;
+private String area;
+private String street;
+private String pe;
+private String tel;
+private String box;
+private String sele;
+private int count;
+private int page;
+private int cot;
+
+public int getPage() {
+	return page;
+}
+public void setPage(int page) {
+	this.page = page;
+}
+public int getCot() {
+	return cot;
+}
+public void setCot(int cot) {
+	this.cot = cot;
+}
+public String getSele() {
+	return sele;
+}
+public void setSele(String sele) {
+	this.sele = sele;
+}
+public String getBox() {
+	return box;
+}
+public void setBox(String box) {
+	this.box = box;
+}
+public String getProvince() {
+	return province;
+}
+public void setProvince(String province) {
+	this.province = province;
+}
+public String getCity() {
+	return city;
+}
+public void setCity(String city) {
+	this.city = city;
+}
+public String getArea() {
+	return area;
+}
+public void setArea(String area) {
+	this.area = area;
+}
+public String getStreet() {
+	return street;
+}
+public void setStreet(String street) {
+	this.street = street;
+}
+public String getPe() {
+	return pe;
+}
+public void setPe(String pe) {
+	this.pe = pe;
+}
+public String getTel() {
+	return tel;
+}
+public void setTel(String tel) {
+	this.tel = tel;
+}
+public int getCount() {
+	return count;
+}
+public void setCount(int count) {
+	this.count = count;
+}
+public String getOid() {
+	return oid;
+}
+public void setOid(String oid) {
+	this.oid = oid;
+}
+public order getOrder() {
+	return order;
+}
+public void setOrder(order order) {
+	this.order = order;
+}
+public int getSt() {
+	return st;
+}
+public void setSt(int st) {
+	this.st = st;
+}
+public String getUid() {
+	return uid;
+}
+public void setUid(String uid) {
+	this.uid = uid;
+}
+public ArrayList<order> getAo() {
+	return ao;
+}
+public void setAo(ArrayList<order> ao) {
+	this.ao = ao;
+}
+public OrdersDaoImp getDao() {
+	return dao;
+}
+public void setDao(OrdersDaoImp dao) {
+	this.dao = dao;
+}
+public String getCat() {
+	return cat;
+}
+public void setCat(String cat) {
+	this.cat = cat;
+}
+public String listorder(){
+	System.out.println(cat);
+	dao=new OrdersDaoImp();
+	ArrayList<order>	ab=new ArrayList<order>();
+	if(cat==null){
+		ao=(ArrayList<order>)(dao.listOrder(1));
+		ab=(ArrayList<order>)(dao.listOrder(0));
+		ao.addAll(ab);
+		System.out.println(ao);
+	}else{
+		if(cat.equals("1")){
+		    ao=(ArrayList<order>)(dao.listOrder(0));}
+			 if(cat.equals("2")){
+				ao=(ArrayList<order>)(dao.listOrder(1));
+			}
+			 if(cat.equals("0")){
+				 ao=(ArrayList<order>)(dao.listOrder(1));
+					ab=(ArrayList<order>)(dao.listOrder(0));
+					ao.addAll(ab);
+				}
+	}
+	
+	//System.out.println(ao.toString());
+	ServletActionContext.getRequest().setAttribute("ao", ao);
+	return "success";
+}
+public String sendOrder(){
+	//System.out.println("oid:"+oid);
+	dao=new OrdersDaoImp();
+	dao.sendOrder(oid);
+	return "send";
+}
+public String listOrderbyoid(){
+	System.out.println("oid:"+oid);
+	dao=new OrdersDaoImp();
+	order=dao.listOrder(oid);
+	System.out.println("order:"+order);
+	ServletActionContext.getRequest().setAttribute("or", order);
+	return "listoid";
+}
+public String updateorder(){
+	System.out.println("oid"+oid);
+	
+	dao=new OrdersDaoImp();
+	boolean b=dao.updateOrder(oid, count, pe, tel, province, city, area, street);
+	System.out.println(b);
+	return "up";
+}
+public String deleteorder(){
+	System.out.println("sele:"+sele);
+	String[] arra=this.getBox().split(", "); 
+	System.out.println(arra.length);
+	//System.out.println(arra[2]);
+	if(sele.equals("1")){
+		for(int i=0;i<arra.length;i++){
+			
+			dao=new OrdersDaoImp();
+			dao.deleteOrder(arra[i]);
+		}
+	}
+	if(sele.equals("2")){
+for(int i=0;i<arra.length;i++){
+			
+			dao=new OrdersDaoImp();
+			dao.sendOrder(arra[i]);
+		}
+	}
+	return "deleteok";
+}
+public String listorderbypage(){
+	System.out.println(page);
+	int nowpage=page;
+	int firstpage=1;
+	dao=new OrdersDaoImp();
+	int allcount=dao.getAllorder();
+	int lastpage=(allcount%cot==0)?(allcount/cot):(allcount/cot+1);
+	int prepage=(nowpage==1)?1:(nowpage-1);
+	int nextpage=(nowpage==lastpage)?lastpage:(nowpage+1);
+	Page p=new Page(allcount, nowpage, firstpage, prepage, nextpage, lastpage, allcount);
+	List<order> as=dao.listorderbypage(nextpage, cot);
+	ServletActionContext.getRequest().setAttribute("as", as);
+	ServletActionContext.getRequest().setAttribute("p", p);
+	return "page";
+}
+}

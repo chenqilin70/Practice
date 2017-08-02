@@ -1,0 +1,18 @@
+package com.mysql.shopping.model.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mysql.shopping.model.bean.order;
+
+public interface OrdersDao extends BaseDAO{
+public ArrayList<order> listOrder(int st);
+public boolean deleteOrder(String oid);
+public ArrayList<order> listallorder(String userid);
+public boolean updateOrder(String oid,int count,String pe,String te,String pro,String cit,String area,String str);
+public boolean sendOrder(String oid);
+public order listOrder(String oid);
+public List<order> listorderbypage(int page,int count);
+public ArrayList<order> listorder(String username);
+public int getAllorder();
+}
